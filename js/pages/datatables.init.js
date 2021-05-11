@@ -36,10 +36,16 @@ $(document).ready(function() {
             style: 'multi',
             selector: 'td:first-child',
         },
-
+        
         order: [[ 1, 'asc' ]],
         searching: false,
         scrollX: true,
+        scrollCollapse: true,
+        // fixedHeader: true,
+        // fixedColumns: true,
+        // fixedColumns:   {
+        //     leftColumns: 2,
+        // },
         paging:   false,
         ordering: false,
         info:     false
