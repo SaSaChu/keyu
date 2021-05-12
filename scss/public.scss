@@ -47,7 +47,7 @@ body {
             .row {
                 > .title-style {
                     padding: calc((80px - 45px) / 2) 12px;
-                    // height: 80px;
+                    height: 80px;
                     border-radius: 3px;
                     background-color: rgba(42, 58, 75, .75);
     
@@ -222,13 +222,19 @@ body {
                             border-radius: 15px;
 
                             > i {
+                                position: relative;
+                                display: inline-block;
                                 margin-right: 5px;
                                 width: 20px;
                                 height: 20px;
                                 background-color: rgba(255, 255, 255, 1);
                                 border-radius: 50%;
+                                vertical-align: middle;
 
                                 &:before {
+                                    position: absolute;
+                                    top: -2px;
+                                    left: 2px;
                                     color: rgb(0, 122, 255);
                                     font-size: 16px;
                                 }
@@ -262,7 +268,10 @@ body {
                             }
 
                             > h4 {
-                                color: rgb(122, 111, 190);
+                                > a {
+                                    color: rgb(122, 111, 190);
+                                }
+                                
                             }
                         }
 
@@ -271,9 +280,12 @@ body {
                             color: rgb(42, 58, 75);
                         }
                         > h4 {
-                            font-size: 16px;
+                            > a {
+                                font-size: 16px;
                             font-weight: 500;
                             color: rgb(42, 58, 75);
+                            }
+                            
                         }
 
 						.dropdown-menu {

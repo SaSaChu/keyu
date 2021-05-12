@@ -9,7 +9,7 @@ body::-webkit-scrollbar { display: none; }
 .main-content { margin: 0 auto; }
 .main-content .page-content { padding: 70px 0 60px 0; }
 .main-content .page-content .container-fluid { padding: 0; }
-.main-content .page-content .container-fluid .row > .title-style { padding: calc((80px - 45px) / 2) 12px; border-radius: 3px; background-color: rgba(42, 58, 75, 0.75); }
+.main-content .page-content .container-fluid .row > .title-style { padding: calc((80px - 45px) / 2) 12px; height: 80px; border-radius: 3px; background-color: rgba(42, 58, 75, 0.75); }
 .main-content .page-content .container-fluid .row > .title-style.active { background-color: rgba(0, 122, 255, 0.75); }
 .main-content .page-content .container-fluid .row > .title-style .page-title-box { margin: 0 30px; padding: 0; }
 .main-content .page-content .container-fluid .row > .title-style .page-title-box > h4 { font-size: 20px; font-weight: 600; }
@@ -38,15 +38,15 @@ body::-webkit-scrollbar { display: none; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box .breadcrumb .breadcrumb-item:before { color: rgba(255, 255, 255, 0.5); }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn:nth-child(2) { margin: 0 20px; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a { padding: 5px 10px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 15px; }
-.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i { margin-right: 5px; width: 20px; height: 20px; background-color: white; border-radius: 50%; }
-.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i:before { color: #007aff; font-size: 16px; }
+.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i { position: relative; display: inline-block; margin-right: 5px; width: 20px; height: 20px; background-color: white; border-radius: 50%; vertical-align: middle; }
+.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i:before { position: absolute; top: -2px; left: 2px; color: #007aff; font-size: 16px; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content { position: relative; bottom: 40px; border-radius: 3px; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item { position: relative; padding: 12px 12px 9px 12px; border-bottom: 2px solid transparent; cursor: pointer; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active { border-bottom-color: #7a6fbe; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover > i, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active > i { color: #7a6fbe; }
-.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover > h4, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active > h4 { color: #7a6fbe; }
+.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover > h4 > a, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active > h4 > a { color: #7a6fbe; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item > i { font-size: 20px; color: #2a3a4b; }
-.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item > h4 { font-size: 16px; font-weight: 500; color: #2a3a4b; }
+.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item > h4 > a { font-size: 16px; font-weight: 500; color: #2a3a4b; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item .dropdown-menu { position: absolute; top: calc(100% + 2px); border-radius: 3px; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item .dropdown-menu .dropdown-item { font-size: 16px; font-weight: 500; color: #47505a; }
 .main-content .page-content .container-fluid #page-search #search-title { padding: calc((80px - 45px) / 2) 12px; border-radius: 3px; background-color: rgba(42, 58, 75, 0.75); }
