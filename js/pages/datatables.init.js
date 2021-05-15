@@ -41,16 +41,15 @@ $(document).ready(function() {
         searching: false,
         scrollX: true,
         scrollCollapse: true,
-        // fixedHeader: true,
-        // fixedColumns: true,
-        // fixedColumns:   {
-        //     leftColumns: 2,
-        // },
         paging:   false,
         ordering: false,
         info:     false
     });
 
+    $(document).on('click', ".buttons-delete", function() {
+        var rows = table.rows('.selected');
+        rows.remove().draw();
+    });
     $(document).on("click", "th.select-checkbox", function() {
         if ($("th.select-checkbox").hasClass("selected")) {
             table.rows().deselect();

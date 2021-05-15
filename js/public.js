@@ -243,6 +243,90 @@ $(document).ready(function(){
         })
         
     }
+
+    function initExportSelectMenu() {
+        $('.buttons-table-menu.dropdown-menu').on('click', function(event) {
+            event.stopPropagation();
+        });
+
+        $('.buttons-table-menu-btn').on('click', function(event) {
+            $('.buttons-table.dropdown-toggle.dropdown-toggle-split').dropdown('hide');
+        })
+
+        $('input.select-all').on('click', function(event){
+            let type = $(this).attr('data-type');
+            $('.dropdown-items[data-type='+type+']').find('input').click();
+        })
+    }
+
+    // 匯出按鈕
+    function initExportBtn() {
+        $('.export-btn').on('click', function(event) {
+            let value = [];
+            $('.export-columns:checked').each(function(i) {
+                value[i] = $(this).val();
+            });
+            console.log(value);
+        }) 
+    }
+
+    // 派工按鈕
+    function initAssignSubmitBtn() {
+        
+        $('.buttons-assign').on('click', function(event) {
+            
+            event.preventDefault();
+            event.stopPropagation()
+
+            var selected = $('#datatable-buttons').find('tr.selected').length 
+            
+            if(!selected) {
+                Swal.fire({
+                    title: "請先選擇",
+                    icon: "warning",
+                    confirmButtonColor: "#34c38f",
+                    confirmButtonText: "確定"
+                });
+                
+            } else {
+                $('#assignModal').modal('show') ;
+            }
+        })
+
+        $('#assign-submit-btn').on('click', function(event){
+            
+            Swal.fire(
+                {
+                    title: '派工完成！',
+                    icon: 'success',
+                    confirmButtonColor: '#7a6fbe',
+                    confirmButtonText: "確定"
+                }
+            ).then(function (result) {
+                $('#assignModal').modal('hide') ;
+            });
+        })
+    }
+
+    function initQusetionMark() {
+        let count = 0;
+        $('#q-mark').on('click', function(event) {
+            $('.q-tip').toggle();
+        });
+
+        $('.q-tip-box').find('input').on('click', function(event) {
+            
+            if( !count ) {
+                $('.q-tip').toggle();
+                count++;
+            } else {
+                $('.q-tip').hide();
+            }
+            
+            
+
+        })
+    }
     
 
     function init() {
@@ -254,6 +338,10 @@ $(document).ready(function(){
         initTable();
         initAccordionAddBtn(); 
         initRedispatchBtn();
+        initExportSelectMenu();
+        initExportBtn()
+        initAssignSubmitBtn();
+        initQusetionMark();
         // initButtonsTable();
     };
 

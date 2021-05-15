@@ -22,19 +22,18 @@
 	<link href="libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 	<link href="libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
 	<link href="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
-	<!-- <link href="libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" /> -->
-	<!-- DataTables -->
+		<!-- Sweet Alert-->
+	<link href="libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" /> 
+		<!-- DataTables -->
 	<link href="libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 	<link href="libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 	<link href="libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />	
 	<link href="libs/datatables.net-fixedheader/css/fixedHeader.dataTables.min.css" rel="stylesheet" type="text/css" />	
 	<link href="libs/datatables.net-fixedcolumns/css/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css" />	
-	
-	<!-- Responsive datatable examples -->
+		<!-- Responsive datatable examples -->
 	<link href="libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
-	<!-- Bootstrap Css -->
-
 	<!-- <link rel="stylesheet" type="text/css" href="css/icon.css"> -->
+
 	<link rel="stylesheet" type="text/css" href="css/public.css">
 </head>
 
@@ -733,9 +732,321 @@
 											<div class="col-md-6">
 												<h4 class="card-title text-start">篩選結果</h4>
 											</div>
+											
 											<div class="col-md-4 card-button text-end">
-												<button class="btn btn-secondary buttons-table buttons-excel" type="button"><span>匯出</span></button>
-												<button class="btn btn-secondary buttons-table buttons-assign" type="button"><span>派工</span></button>
+												<!-- 匯出 -->
+												<div class="btn-group">
+													<button class="btn btn-secondary buttons-table export-btn" type="button"><span>匯出</span></button>
+													<button class="btn btn-secondary buttons-table dropdown-toggle dropdown-toggle-split ps-1 pe-1 " type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="mdi mdi-chevron-down"></i>
+													</button>
+													<div class="buttons-table-menu dropdown-menu" style="margin: 0px;">
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">客戶基本資料</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label select-all">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="info">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="info">
+																<div class="form-check">
+																	<label class="form-check-label">客戶編號
+																		<input class="form-check-input export-columns" type="checkbox" value="1">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">客戶名稱
+																		<input class="form-check-input export-columns" type="checkbox" value="2">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">主要負責同仁
+																		<input class="form-check-input export-columns" type="checkbox" value="3">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">機號
+																		<input class="form-check-input export-columns" type="checkbox" value="4">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">廠牌
+																		<input class="form-check-input export-columns" type="checkbox" value="5">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">型號
+																		<input class="form-check-input export-columns" type="checkbox" value="6">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">縣市
+																		<input class="form-check-input export-columns" type="checkbox" value="7">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">地區
+																		<input class="form-check-input export-columns" type="checkbox" value="8">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">地址
+																		<input class="form-check-input export-columns" type="checkbox" value="9">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">主要聯絡人
+																		<input class="form-check-input export-columns" type="checkbox" value="10">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">連絡電話
+																		<input class="form-check-input export-columns" type="checkbox" value="11">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">手機
+																		<input class="form-check-input export-columns" type="checkbox" value="12">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">交易方式
+																		<input class="form-check-input export-columns" type="checkbox" value="13">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">合約起訖日
+																		<input class="form-check-input export-columns" type="checkbox" value="14">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">使用部門
+																		<input class="form-check-input export-columns" type="checkbox" value="15">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																
+															</div>
+														<div class="dropdown-divider"></div>
+														</div>
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">背景調查</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="check">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="check">
+																<div class="form-check">
+																	<label class="form-check-label">上次拜訪日期
+																		<input class="form-check-input export-columns" type="checkbox" value="16">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">黑白月均印量
+																		<input class="form-check-input export-columns" type="checkbox" value="17">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">彩色月均印量
+																		<input class="form-check-input export-columns" type="checkbox" value="18">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">使用人數
+																		<input class="form-check-input export-columns" type="checkbox" value="19">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">電腦台數
+																		<input class="form-check-input export-columns" type="checkbox" value="20">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">其他庫存
+																		<input class="form-check-input export-columns" type="checkbox" value="21">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+														</div>	
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">任務內容</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="mission">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="mission">
+																<div class="form-check">
+																	<label class="form-check-label">登入日期
+																		<input class="form-check-input export-columns" type="checkbox" value="22">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">登入人員
+																		<input class="form-check-input export-columns" type="checkbox" value="23">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">指定日期
+																		<input class="form-check-input export-columns" type="checkbox" value="24">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">指定時段
+																		<input class="form-check-input export-columns" type="checkbox" value="25">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">派工日期
+																		<input class="form-check-input export-columns" type="checkbox" value="26">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">任務類型
+																		<input class="form-check-input export-columns" type="checkbox" value="27">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">任務細項
+																		<input class="form-check-input export-columns" type="checkbox" value="28">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">服務人員
+																		<input class="form-check-input export-columns" type="checkbox" value="29">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																
+															</div>
+															<div class="dropdown-divider"></div>
+														</div>	
+														<button class="btn btn-primary color-blue buttons-table-menu-btn">確定</button>
+														
+													</div>
+												</div>
+												<!-- 派工 -->
+												<div class="btn-group">
+													<button class="btn btn-secondary buttons-table buttons-assign" type="button" ><span>派工</span></button>
+													<div class="modal fade" id="assignModal" tabindex="-1" aria-labelledby="assignModalLabel" aria-hidden="true">
+														<div class="modal-dialog modal-dialog-centered">
+														  <div class="modal-content">
+															<div class="modal-header">
+															  <h5 class="modal-title text-blue2 font-size-20 fw-bolder" id="assignModalLabel">指派任務</h5>
+															  <h5 class="modal-title font-size-16 " >轄區：<span>台北區</span></h5>
+															  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+															</div>
+															<div class="modal-body">
+															  <form>
+																<div class="row mb-3">
+																	<div class="col-md-6 mb-3">
+																		<label class="col-form-label text-start w-100">個人小組
+																			<select class="form-control mt-2" name="" id="">
+																				<option>請選擇</option>
+																				<option value="AK">Alaska</option>
+																				<option value="CA">California</option>
+																				<option value="AZ">Arizona</option>
+																				<option value="AL">Alabama</option>
+																				<option value="CT">Connecticut</option>
+																			</select>
+																		</label>
+																		
+																	</div>
+																	<div class="col-md-6 mb-3">
+																		<label for="recipient-name" class="col-form-label text-start w-100">選擇人員
+																			<select class="form-control mt-2" name="" id="">
+																				<option>請選擇</option>
+																				<option value="AK">Alaska</option>
+																				<option value="CA">California</option>
+																				<option value="AZ">Arizona</option>
+																				<option value="AL">Alabama</option>
+																				<option value="CT">Connecticut</option>
+																			</select>
+																		</label>
+																		
+																	</div>
+																	<div class="col-md-6 mb-3">
+																		<label for="recipient-name" class="col-form-label text-start w-100">選擇人員
+																			<input class="form-control mt-2" type="date" name="" id="">
+																		</label>
+																		
+																	</div>
+																	<div class="col-md-6 mb-3">
+																		<label for="recipient-name" class="col-form-label text-start w-100">指定時段
+																			<select class="form-control mt-2" name="" id="">
+																				<option>請選擇</option>
+																				<option value="AK">Alaska</option>
+																				<option value="CA">California</option>
+																				<option value="AZ">Arizona</option>
+																				<option value="AL">Alabama</option>
+																				<option value="CT">Connecticut</option>
+																			</select>
+																		</label>
+																		
+																	</div>
+																</div>
+																<div class="row mb-3">
+																	<div class="col-md-12">
+																		
+																		<label for="mdi-message-text-outline" class="col-form-label text-start w-100">備註</label>
+																		<textarea class="form-control" id="message-text"></textarea>
+																		  
+																	</div>
+																</div>
+																
+															  </form>
+															</div>
+															<div class="modal-footer">
+															  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取 消</button>
+															  <button id="assign-submit-btn" type="button" class="btn btn-primary color-blue" data-bs-toggle="modal" data-bs-target="#successModal">確定派工</button>
+															</div>
+														  </div>
+														</div>
+													  </div>
+												</div>
+
+												<!-- 刪除 -->
 												<button class="btn btn-secondary buttons-table buttons-delete" type="button"><span>刪除</span></button>
 											</div>
 											<div class="col-md-2 card-button display-select"></div>
@@ -759,6 +1070,9 @@
 													<li class="nav-item" role="presentation">
 														<a class="nav-link" id="pills-process-nc-tab" data-bs-toggle="pill" href="#pills-process-nc" role="tab" aria-controls="pills-process-nc" aria-selected="false">已派工未處理</a>
 													</li>
+													<li class="nav-item" role="presentation">
+														<a class="nav-link" id="pills-process-nc-tab" data-bs-toggle="pill" href="#pills-mission-auto" role="tab" aria-controls="pills-mission-auto" aria-selected="false">自動預排任務</a>
+													</li>
 												</ul>
 											</div>
 											<div class="col-md-4 text-end">
@@ -773,10 +1087,11 @@
 										
 										<div class="tab-content" id="pills-tabContent">
 											<div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-												<table id="datatable-buttons" class="table nowrap order-column" style="width: 100%;">
+												<table id="datatable-buttons" class="datatable-buttons table nowrap order-column" style="width: 100%;">
 													<thead>
 														<tr>
 															<th class="select-all">全選</th>
+															<th>查看</th>	
 															<th>登錄日期</th>
 															<th>到期日</th>
 															<th>指定日期時段</th>
@@ -794,6 +1109,7 @@
 													<tbody>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -808,6 +1124,7 @@
 														</tr>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -822,6 +1139,7 @@
 														</tr>
 														<tr class="yellow">
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -836,6 +1154,7 @@
 														</tr>
 														<tr class="orange">
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -850,6 +1169,7 @@
 														</tr>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -864,6 +1184,7 @@
 														</tr>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>2021/3/21</td>
 															<td>2021/3/21 9:00-12:00</td>
@@ -876,212 +1197,127 @@
 															<td>C364</td>
 															<td>A5C4444443</td>
 														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														
 													</tbody>
 												</table>
 											</div>
 											<div class="tab-pane fade" id="pills-complete" role="tabpanel" aria-labelledby="pills-complete-tab">
-												123
+												<table id="datatable-buttons2" class="datatable-buttons table nowrap order-column" style="width: 100%;">
+													<thead>
+														<tr>
+															<th class="select-all">全選</th>
+															<th>查看</th>	
+															<th>登錄日期</th>
+															<th>到期日</th>
+															<th>指定日期時段</th>
+															<th>任務類型</th>
+															<th>任務細項</th>
+															<th>任務內容</th>
+															<th>客戶編號</th>
+															<th>客戶名稱</th>
+															<th>廠牌</th>
+															<th>機型</th>
+															<th>機號</th>
+														</tr>
+													</thead>
+			
+													<tbody>
+														<tr>
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+														<tr class="yellow">
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+														<tr class="orange">
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>2021/3/21</td>
+															<td>2021/3/21 9:00-12:00</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+														</tr>
+													</tbody>
+												</table>
 											</div>
 											<div class="tab-pane fade" id="pills-unassign" role="tabpanel" aria-labelledby="pills-unassign-tab">abc</div>
 											<div class="tab-pane fade" id="pills-assign-np" role="tabpanel" aria-labelledby="pills-contact-tab">abc1</div>
 											<div class="tab-pane fade" id="pills-process-nc" role="tabpanel" aria-labelledby="pills-process-nc-tab">abc2</div>
+											<div class="tab-pane fade" id="pills-mission-auto" role="tabpanel" aria-labelledby="pills-mission-auto-tab">abc3</div>
 										</div>
 
 										
@@ -1134,15 +1370,15 @@
 	<!-- Responsive examples -->
 	<script src="libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 	<script src="libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-
-	<!-- Datatable init js -->
-	<script src="js/pages/datatables.init.js"></script>
-	<!-- Responsive Table js -->
-	<!-- <script src="libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
+	<!-- Sweet Alerts js -->
+	<script src="libs/sweetalert2/sweetalert2.min.js"></script>
 
 	<!-- Init js -->
-	<!-- <script src="js/pages/table-responsive.init.js"></script> -->
 	<script src="js/pages/form-advanced.init.js"></script>
+		<!-- Datatable init js -->
+	<script src="js/pages/datatables.init.js"></script>
+		<!-- Sweet alert init js-->
+	<script src="js/pages/sweet-alerts.init.js"></script>
 
 
 	<!-- App js -->
