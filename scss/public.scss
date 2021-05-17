@@ -460,6 +460,9 @@ body {
                                 left: unset !important;
                                 padding: 15px;
                                 width: 360px;
+                                height: 380px;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
                                 // box-shadow: 0 2px 30px rgb(0 0 0 / 8%);
 
                                 > .dropdown-item-group {
