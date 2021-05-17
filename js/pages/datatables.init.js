@@ -12,6 +12,8 @@ $(document).ready(function() {
     // $('#datatable').DataTable();
 
     //Buttons examples
+
+        
     var table = $('#datatable-buttons').DataTable({
         dom: "Bfrtip",
         
@@ -46,10 +48,14 @@ $(document).ready(function() {
         info:     false
     });
 
+    table.buttons().container()
+        .appendTo('.card-box .col-md-2:eq(0)');
+
     $(document).on('click', ".buttons-delete", function() {
         var rows = table.rows('.selected');
         rows.remove().draw();
     });
+
     $(document).on("click", "th.select-checkbox", function() {
         if ($("th.select-checkbox").hasClass("selected")) {
             table.rows().deselect();
@@ -67,13 +73,9 @@ $(document).ready(function() {
         } else {
             $("th.select-checkbox").addClass("selected");
         }
-    });
+    }); 
 
-    table.buttons().container()
-        .appendTo('.card-box .col-md-2:eq(0)');
     
-    
-
     // $(".dataTables_length select").addClass('form-select form-select-sm');
 
 

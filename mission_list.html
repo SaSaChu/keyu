@@ -966,6 +966,10 @@
 														
 													</div>
 												</div>
+
+												<!-- 新增任務 -->
+												<button class="btn btn-secondary buttons-table buttons-add d-none" type="button"><span><a href="mission_add.html" class="text-white">新增任務</a> </span></button>
+
 												<!-- 派工 -->
 												<div class="btn-group">
 													<button class="btn btn-secondary buttons-table buttons-assign" type="button" ><span>派工</span></button>
@@ -1044,16 +1048,19 @@
 														  </div>
 														</div>
 													  </div>
-												</div>
+												</div>	
 
 												<!-- 刪除 -->
 												<button class="btn btn-secondary buttons-table buttons-delete" type="button"><span>刪除</span></button>
+
+												<!-- 延期 -->
+												<button class="btn btn-secondary buttons-table buttons-delay d-none" type="button"><span>延期</span></button>
 											</div>
 											<div class="col-md-2 card-button display-select"></div>
 										</div>
 
 										<div class="card-nav mb-3 d-flex align-items-center">
-											<div class="col-md-8">
+											<div class="col-md-9">
 												<ul class="nav nav-pills" id="pills-tab" role="tablist">
 													<li class="nav-item" role="presentation">
 														<a class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">全 部</a>
@@ -1068,14 +1075,14 @@
 														<a class="nav-link" id="pills-assign-np-tab" data-bs-toggle="pill" href="#pills-assign-np" role="tab" aria-controls="pills-assign-np" aria-selected="false">已派工未處理</a>
 													</li>
 													<li class="nav-item" role="presentation">
-														<a class="nav-link" id="pills-process-nc-tab" data-bs-toggle="pill" href="#pills-process-nc" role="tab" aria-controls="pills-process-nc" aria-selected="false">已派工未處理</a>
+														<a class="nav-link" id="pills-process-nc-tab" data-bs-toggle="pill" href="#pills-process-nc" role="tab" aria-controls="pills-process-nc" aria-selected="false">已處理未完成</a>
 													</li>
 													<li class="nav-item" role="presentation">
-														<a class="nav-link" id="pills-process-nc-tab" data-bs-toggle="pill" href="#pills-mission-auto" role="tab" aria-controls="pills-mission-auto" aria-selected="false">自動預排任務</a>
+														<a class="nav-link" id="pills-mission-atuo-tab" data-bs-toggle="pill" href="#pills-mission-auto" role="tab" aria-controls="pills-mission-auto" aria-selected="false">自動預排任務</a>
 													</li>
 												</ul>
 											</div>
-											<div class="col-md-4 text-end">
+											<div class="col-md-3 text-end">
 												<div class="nav-notice">
 													<span class="yellow">逾期一天以上</span>
 													<span class="orange">逾期三天以上</span>
@@ -1201,118 +1208,6 @@
 												</table>
 											</div>
 											<div class="tab-pane fade" id="pills-complete" role="tabpanel" aria-labelledby="pills-complete-tab">
-												<table id="datatable-buttons2" class="datatable-buttons table nowrap order-column" style="width: 100%;">
-													<thead>
-														<tr>
-															<th class="select-all">全選</th>
-															<th>查看</th>	
-															<th>登錄日期</th>
-															<th>到期日</th>
-															<th>指定日期時段</th>
-															<th>任務類型</th>
-															<th>任務細項</th>
-															<th>任務內容</th>
-															<th>客戶編號</th>
-															<th>客戶名稱</th>
-															<th>廠牌</th>
-															<th>機型</th>
-															<th>機號</th>
-														</tr>
-													</thead>
-			
-													<tbody>
-														<tr>
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr class="yellow">
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr class="orange">
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-														<tr>
-															<td></td>
-															<td class="text-center"><a href="mission_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
-															<td>2021/3/19</td>
-															<td>2021/3/21</td>
-															<td>2021/3/21 9:00-12:00</td>
-															<td>叫修</td>
-															<td>B-1黑色效果異常</td>
-															<td>列印出現黑線</td>
-															<td>TP0832-01</td>
-															<td>林口長庚醫院-幹細胞 ...</td>
-															<td>KM</td>
-															<td>C364</td>
-															<td>A5C4444443</td>
-														</tr>
-													</tbody>
-												</table>
 											</div>
 											<div class="tab-pane fade" id="pills-unassign" role="tabpanel" aria-labelledby="pills-unassign-tab">abc</div>
 											<div class="tab-pane fade" id="pills-assign-np" role="tabpanel" aria-labelledby="pills-contact-tab">abc1</div>

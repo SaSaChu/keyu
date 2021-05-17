@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta http-equiv="Content-Language" content="zh-tw">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+	<meta charset="utf-8" />
+
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<title>Ginkgo！</title>
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+	<!-- Icons Css -->
+	<link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+	<!-- App Css-->
+	<link href="css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+	<!-- Libs -->
+	<link href="libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+	<link href="libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="libs/spectrum-colorpicker2/spectrum.min.css" rel="stylesheet" type="text/css">
+	<link href="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+	<!-- <link href="libs/admin-resources/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" /> -->
+	<!-- DataTables -->
+	<link href="libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+	<link href="libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+	<link href="libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />	
+	<!-- Responsive datatable examples -->
+	<link href="libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" /> 
+	<!-- Bootstrap Css -->
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/icon.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+
+<body>
+	<div id="layout-wrapper">
+		<header id="page-topbar">
+			<div class="container p-0">
+				<div class="navbar-header">
+					<!-- Header LOGO -->
+					<div class="d-flex">
+
+						<h1>
+							<a href="/" class="font-size-18 align-middle">科宇EIP系統</a>
+						</h1>
+					</div>
+					<!-- Header Action -->
+					<div class="d-flex">
+
+						<!-- App Search-->
+						<form class="app-search d-none d-lg-block">
+							<div class="position-relative">
+								<input type="text" class="form-control" placeholder="搜尋...">
+								<span class="fa fa-search"></span>
+							</div>
+						</form>
+
+
+						<div class="dropdown d-inline-block d-lg-none ml-2">
+							<button type="button" class="btn header-item noti-icon waves-effect"
+								id="page-header-search-dropdown" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">
+								<i class="mdi mdi-magnify"></i>
+							</button>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
+								aria-labelledby="page-header-search-dropdown">
+
+								<form class="p-3">
+									<div class="form-group m-0">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search ..."
+												aria-label="Recipient's username">
+											<div class="input-group-append">
+												<button class="btn btn-primary" type="submit"><i
+														class="mdi mdi-magnify"></i></button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<!-- notice bell -->
+						<div class="dropdown d-inline-block ms-1">
+							<button type="button" class="btn header-item noti-icon waves-effect"
+								id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">
+								<i class="mdi mdi-bell"></i>
+								<span class="badge bg-danger rounded-pill">3</span>
+							</button>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+								aria-labelledby="page-header-notifications-dropdown">
+								<div class="p-3">
+									<div class="row align-items-center">
+										<div class="col">
+											<h5 class="m-0"> Notifications (258) </h5>
+										</div>
+									</div>
+								</div>
+								<div data-simplebar style="max-height: 230px;">
+									<a href="" class="text-reset notification-item">
+										<div class="media">
+											<div class="avatar-xs me-3">
+												<span class="avatar-title border-success rounded-circle ">
+													<i class="mdi mdi-cart-outline"></i>
+												</span>
+											</div>
+											<div class="media-body">
+												<h6 class="mt-0 mb-1">Your order is placed</h6>
+												<div class="text-muted">
+													<p class="mb-1">If several languages coalesce the grammar</p>
+												</div>
+											</div>
+										</div>
+									</a>
+
+									<a href="" class="text-reset notification-item">
+										<div class="media">
+											<div class="avatar-xs me-3">
+												<span class="avatar-title border-warning rounded-circle ">
+													<i class="mdi mdi-message"></i>
+												</span>
+											</div>
+											<div class="media-body">
+												<h6 class="mt-0 mb-1">New Message received</h6>
+												<div class="text-muted">
+													<p class="mb-1">You have 87 unread messages</p>
+												</div>
+											</div>
+										</div>
+									</a>
+
+									<a href="" class="text-reset notification-item">
+										<div class="media">
+											<div class="avatar-xs me-3">
+												<span class="avatar-title border-info rounded-circle ">
+													<i class="mdi mdi-glass-cocktail"></i>
+												</span>
+											</div>
+											<div class="media-body">
+												<h6 class="mt-0 mb-1">Your item is shipped</h6>
+												<div class="text-muted">
+													<p class="mb-1">It is a long established fact that a reader will</p>
+												</div>
+											</div>
+										</div>
+									</a>
+
+									<a href="" class="text-reset notification-item">
+										<div class="media">
+											<div class="avatar-xs me-3">
+												<span class="avatar-title border-primary rounded-circle ">
+													<i class="mdi mdi-cart-outline"></i>
+												</span>
+											</div>
+											<div class="media-body">
+												<h6 class="mt-0 mb-1">Your order is placed</h6>
+												<div class="text-muted">
+													<p class="mb-1">Dummy text of the printing and typesetting industry.
+													</p>
+												</div>
+											</div>
+										</div>
+									</a>
+
+									<a href="" class="text-reset notification-item">
+										<div class="media">
+											<div class="avatar-xs me-3">
+												<span class="avatar-title border-warning rounded-circle ">
+													<i class="mdi mdi-message"></i>
+												</span>
+											</div>
+											<div class="media-body">
+												<h6 class="mt-0 mb-1">New Message received</h6>
+												<div class="text-muted">
+													<p class="mb-1">You have 87 unread messages</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="p-2 border-top">
+									<a class="btn btn-sm btn-link font-size-14 w-100 text-center"
+										href="javascript:void(0)">
+										View all
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- User -->
+						<div class="dropdown d-inline-block">
+							<button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+								data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img class="rounded-circle header-profile-user" src="images/users/user-4.jpg"
+									alt="Header Avatar">
+							</button>
+							<div class="dropdown-menu dropdown-menu-end">
+								<!-- User item-->
+								<a class="dropdown-item" href="#"><i
+										class="mdi mdi-account-circle font-size-17 text-muted align-middle me-1"></i>
+									Profile</a>
+								<a class="dropdown-item" href="#"><i
+										class="mdi mdi-wallet font-size-17 text-muted align-middle me-1"></i> My
+									Wallet</a>
+								<a class="dropdown-item d-block" href="#"><span
+										class="badge bg-success float-end">11</span><i
+										class="mdi mdi-cog font-size-17 text-muted align-middle me-1"></i> Settings</a>
+								<a class="dropdown-item" href="#"><i
+										class="mdi mdi-lock-open-outline font-size-17 text-muted align-middle me-1"></i>
+									Lock screen</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item text-danger" href="#"><i
+										class="mdi mdi-power font-size-17 text-muted align-middle me-1 text-danger"></i>
+									Logout</a>
+							</div>
+						</div>
+
+						<div class="dropdown d-inline-block">
+							<button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+								<i class="mdi mdi-cog"></i>
+							</button>
+						</div>
+
+
+						<div class="dropdown d-inline-block">
+							<button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+								<i class="fas fa-book"></i>
+							</button>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ============================================================== -->
+		<!-- Start Content here -->
+		<!-- ============================================================== -->
+		<div class="main-content">
+			<div class="page-content">
+				<div class="container-fluid">
+					<!-- start page title -->
+					<!-- breadcrumb -->
+					<div id="page-breadcrumb" class="row">
+						<div class="container d-flex align-items-center p-0">
+							<div class="col-sm-6">
+								<div class="page-title-box">
+									<h4 class="text-start text-white">任務總覽列表</h4>
+									<ol class="breadcrumb m-0">
+										<li class="breadcrumb-item "><a href="javascript: void(0);"
+												class="text-white-50">首頁</a></li>
+										<li class="breadcrumb-item "><a href="javascript: void(0);"
+												class="text-white-50">任務模組</a></li>
+										<li class="breadcrumb-item text-white-50">任務總覽列表</li>
+									</ol>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="page-action-box d-sm-flex justify-content-end">
+									<div class="action-btn">
+										<a href="mission_reply.html" class="text-white-50"><i
+                                            class="mdi mdi-arrow-collapse-left action-btn-icon"></i>任務回報</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- navbar -->
+					<div id="page-navbar" class="row">
+						<div id="navbar-content" class="container d-flex p-0 bg-white">
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-message-text-outline"></i>
+									<h4><a href="#">公司公佈欄</a></h4>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-account-outline"></i>
+									<h4><a href="#">與我有關</a></h4>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item active">
+									<i class="mdi mdi-view-grid-outline"></i>
+									<h4><a href="#">任務模組</a></h4>
+
+									<div class="dropdown-menu ">
+										<a class="dropdown-item" href="mission_list.html">任務總覽列表</a>
+										<a class="dropdown-item" href="satisfaction_list.html">滿意度調查</a>
+										<a class="dropdown-item" href="mission_add.html">新增任務</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-square-edit-outline"></i>
+									<h4><a href="#">採購詢價/訂貨</a></h4>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-clipboard-check"></i>
+									<h4><a href="#">內部簽核</a></h4>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-feature-search-outline"></i>
+									<h4><a href="#">資料查詢</a></h4>
+								</div>
+							</div>
+							<div class="col-sm">
+								<div class="navbar-item">
+									<i class="mdi mdi-cog"></i>
+									<h4><a href="#">網站基本設定</a></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+                    <div id="page-mission" class="row align-items-center mb-5">
+                        
+						<!-- <div id="mission1-title" class="title-style container"> -->
+							<!-- <div class="page-title-box d-flex justify-content-between align-items-center">
+								<h4 class="text-white">任務一</h4>
+								<i class="mdi mdi-chevron-down text-white"></i>
+							</div> -->
+						<!-- </div> -->
+
+						<div id="mission-content" class="container p-0 color-245">
+							<div class="col-xl-12">
+								<div class="card">
+									<div class="card-body color-245">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button mobile-style" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    任務一
+                                                </button>
+                                              </h2>
+                                              <div id="collapseOne" class="mobile-style accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="accordion-box">
+                                                        <div class="row">
+                                                            <div class="col-md-12 text-start">
+                                                                <p><span class="fw-bold">任務類型：</span>報價</p>
+                                                                <p><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+                                                                <p><span class="fw-bold">任務細項：列印出現黑線，列印出現黑線，列印出現黑線。</span></p>
+                                                                <p><span class="fw-bold">截止日期：110.05.03</span></p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <a href="mission_reply" class="btn btn-primary color-purple w-100">任務回報</a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                  <button class="accordion-button mobile-style" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                                      任務二
+                                                  </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="mobile-style accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                  <div class="accordion-body">
+                                                      <div class="accordion-box">
+                                                          <div class="row">
+                                                              <div class="col-md-12 text-start">
+                                                                  <p><span class="fw-bold">任務類型：</span>報價</p>
+                                                                  <p><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+                                                                  <p><span class="fw-bold">任務細項：列印出現黑線，列印出現黑線，列印出現黑線。</span></p>
+                                                                  <p><span class="fw-bold">截止日期：110.05.03</span></p>
+                                                              </div>
+                                                          </div>
+  
+                                                          <div class="row">
+                                                              <div class="col-md-12">
+                                                                  <a href="mission_reply" class="btn btn-primary color-purple w-100">任務回報</a>
+                                                              </div>
+                                                          </div>
+                                                          
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                  <button class="accordion-button mobile-style" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                                      任務三
+                                                  </button>
+                                                </h2>
+                                                <div id="collapseThree" class="mobile-style accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                  <div class="accordion-body">
+                                                      <div class="accordion-box">
+                                                          <div class="row">
+                                                              <div class="col-md-12 text-start">
+                                                                <p><span class="fw-bold">任務類型：</span>報價</p>
+                                                                <p><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+                                                                <p><span class="fw-bold">任務細項：列印出現黑線，列印出現黑線，列印出現黑線。</span></p>
+                                                                <p><span class="fw-bold">截止日期：110.05.03</span></p>
+                                                              </div>
+                                                          </div>
+  
+                                                          <div class="row">
+                                                              <div class="col-md-12">
+                                                                  <a href="mission_reply" class="btn btn-primary color-purple w-100">任務回報</a>
+                                                              </div>
+                                                          </div>
+                                                          
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                          </div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+                    
+					<!-- end page title -->
+                    
+			</di> <!-- End container-fluid -->
+		</div>
+		<!-- End Page-content -->
+	</div>
+	<!-- End main content-->
+
+	<footer id="page-footer">
+		<p>&copy; Copyright 2021 - KEYU GROUP</p>
+	</footer>
+	</div>
+
+	<!-- js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="libs/metismenu/metisMenu.min.js"></script>
+	<script src="libs/simplebar/simplebar.min.js"></script>
+	<script src="libs/node-waves/waves.min.js"></script>
+	<script src="libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+	<script src="libs/select2/js/select2.min.js"></script>
+	<script src="libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="libs/spectrum-colorpicker2/spectrum.min.js"></script>
+	<script src="libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="libs/admin-resources/bootstrap-filestyle/bootstrap-filestyle.min.js"></script>
+	<script src="libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+	<!-- Required datatable js -->
+	<script src="libs/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+	<!-- Buttons examples -->
+	<script src="libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+	<script src="libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+	<script src="libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+	<script src="libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+	<script src="libs/datatables.net-select/js/dataTables.select.min.js"></script>
+	<!-- Responsive examples -->
+	<script src="libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+	<script src="libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+	<!-- Datatable init js -->
+	<script src="js/pages/datatables.init.js"></script>
+	<!-- Responsive Table js -->
+	<!-- <script src="libs/admin-resources/rwd-table/rwd-table.min.js"></script> -->
+
+	<!-- Init js -->
+	<!-- <script src="js/pages/table-responsive.init.js"></script> -->
+	<script src="js/pages/form-advanced.init.js"></script>
+
+
+	<!-- App js -->
+	<script src="js/app.js"></script>
+	<script language="javascript" type="text/javascript" src="js/public.js"></script>
+</body>
+
+</html>

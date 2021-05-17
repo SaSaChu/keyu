@@ -76,6 +76,19 @@ $(document).ready(function(){
         })
     }
 
+    function initTabPillChange() {
+        $('a[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+            
+            if($(this).attr('id') === "pills-mission-atuo-tab") {
+                $('.card-button .buttons-delay').removeClass('d-none');
+                $('.card-button .buttons-add').removeClass('d-none');
+            } else {
+                $('.card-button .buttons-delay').addClass('d-none');
+                $('.card-button .buttons-add').addClass('d-none');
+            }
+        })
+    }
+
     function initTable() {
         // $("#page-results").hide(); 
         $(".btn-search").on('click', function(event) {
@@ -335,6 +348,7 @@ $(document).ready(function(){
         initBtnSearch();
         initContentStyle();
         initGetFileName();
+        initTabPillChange();
         initTable();
         initAccordionAddBtn(); 
         initRedispatchBtn();
@@ -346,10 +360,6 @@ $(document).ready(function(){
     };
 
     init();
-
-    // $('.select2-test').select2({
-    //     placeholder: 'Select an option'
-    // });
 });
 
 // })(jQuery)

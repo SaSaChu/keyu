@@ -6,6 +6,8 @@ body::-moz-selection { color: white; background-color: #78baff; }
 body::selection { color: white; background-color: #78baff; }
 body::-webkit-scrollbar { display: none; }
 
+@media screen and (max-width: 449px) and (min-width: 0) { .navbar-header { padding: 0 12px; } }
+
 .main-content { margin: 0 auto; }
 .main-content .page-content { padding: 70px 0 60px 0; }
 .main-content .page-content .container-fluid { padding: 0; }
@@ -33,13 +35,18 @@ body::-webkit-scrollbar { display: none; }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row .btn-search { padding-left: 0; padding-right: 0; width: 100px; height: 40px; font-size: 16px; background-color: #007aff; }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row .btn-search:before { margin-right: 10px; }
 .main-content .page-content .container-fluid #page-breadcrumb { padding: 24px 0; background-color: #2a3a4b; }
+@media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-breadcrumb { padding: 0 24px; }
+  .main-content .page-content .container-fluid #page-breadcrumb .container { justify-content: space-between; } }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box { padding: 14px 0 29px 0; }
+@media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-breadcrumb .page-title-box { padding: 14px; } }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box > h4 { margin: 0; line-height: 2; }
+@media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-breadcrumb .page-title-box .breadcrumb { display: none; } }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box .breadcrumb .breadcrumb-item:before { color: rgba(255, 255, 255, 0.5); }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn:nth-child(2) { margin: 0 20px; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a { padding: 5px 10px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 15px; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i { position: relative; display: inline-block; margin-right: 5px; width: 20px; height: 20px; background-color: white; border-radius: 50%; vertical-align: middle; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i:before { position: absolute; top: -2px; left: 2px; color: #007aff; font-size: 16px; }
+@media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-navbar { display: none; } }
 .main-content .page-content .container-fluid #page-navbar #navbar-content { position: relative; bottom: 40px; border-radius: 3px; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item { position: relative; padding: 12px 12px 9px 12px; border-bottom: 2px solid transparent; cursor: pointer; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active { border-bottom-color: #7a6fbe; }
@@ -96,25 +103,26 @@ body::-webkit-scrollbar { display: none; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-nav .nav-notice > span.yellow:before { background-color: #ffbf3c; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-nav .nav-notice > span.orange:before { background-color: #ff863c; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-nav .nav-notice > span:before { content: ''; position: absolute; top: 4px; left: -16px; display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable { margin-top: 0 !important; border: transparent; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable thead tr > th { font-size: 14px; font-weight: 600; color: #2a3a4b; text-align: left; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable thead tr > th.select-all { cursor: pointer; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons { border-collapse: collapse !important; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody { border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr { border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.odd { background-color: #f8f9fa; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.yellow { background-color: rgba(255, 191, 60, 0.3); }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.orange { background-color: rgba(255, 134, 60, 0.3); }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected { color: #2a3a4b; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected.odd { background-color: #f8f9fa; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected.even { background-color: transparent; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected.yellow { background-color: rgba(255, 191, 60, 0.3); }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected.orange { background-color: rgba(255, 134, 60, 0.3); }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected .select-checkbox { position: relative; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr.selected .select-checkbox:after { content: ''; position: absolute; top: 2em; left: 26%; width: 12px; height: 12px; background-color: #007aff; border-radius: 3px; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr td { font-size: 13px; color: #2a3a4b; text-align: left; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr td.select-checkbox { position: relative; cursor: pointer; }
-.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane #datatable-buttons_wrapper .dataTables_scroll .dataTables_scrollBody #datatable-buttons tbody tr td.select-checkbox:before { width: 20px; height: 20px; top: 1.3em; left: 23%; border: solid 1px #ced4d9; border-radius: 3px; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable { margin-top: 0 !important; border: transparent; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable thead tr > th { font-size: 14px; font-weight: 600; color: #2a3a4b; text-align: left; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollHead .dataTables_scrollHeadInner > .dataTable thead tr > th.select-all { cursor: pointer; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons { border-collapse: collapse !important; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody { border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr { border-top: 1px solid #e9ecef; border-bottom: 1px solid #e9ecef; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.odd { background-color: #f8f9fa; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.yellow { background-color: rgba(255, 191, 60, 0.3); }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.orange { background-color: rgba(255, 134, 60, 0.3); }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected { color: #2a3a4b; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected.odd { background-color: #f8f9fa; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected.even { background-color: transparent; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected.yellow { background-color: rgba(255, 191, 60, 0.3); }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected.orange { background-color: rgba(255, 134, 60, 0.3); }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected a { color: #47505a; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected .select-checkbox { position: relative; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr.selected .select-checkbox:after { content: ''; position: absolute; top: 2em; left: 26%; width: 12px; height: 12px; background-color: #007aff; border-radius: 3px; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr td { font-size: 13px; color: #2a3a4b; text-align: left; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr td.select-checkbox { position: relative; cursor: pointer; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .tab-content .tab-pane .dataTables_wrapper .dataTables_scroll .dataTables_scrollBody .datatable-buttons tbody tr td.select-checkbox:before { width: 20px; height: 20px; top: 1.3em; left: 23%; border: solid 1px #ced4d9; border-radius: 3px; }
 .main-content .page-content .container-fluid #page-check #check-content table thead th { font-size: 14px; }
 .main-content .page-content .container-fluid #page-check #check-content table tbody tr:nth-child(odd) { background-color: #f8f9fa; }
 .main-content .page-content .container-fluid #page-check #check-content table tbody tr td { font-size: 13px; }
@@ -156,7 +164,7 @@ footer > p { margin: 0; }
 
 .color-purple { outline: none; background-color: #7a6fbe; border-color: #7a6fbe; }
 
-.text-red { color: #ec536c; }
+.color-245 { background-color: whitesmoke; }
 
 .color-blue { background-color: #409cff; border-color: #409cff; }
 
@@ -169,6 +177,8 @@ footer > p { margin: 0; }
 .text-gunmetal { color: #47505a; }
 
 .text-red { color: #ec536c !important; }
+
+.text-red { color: #ec536c; }
 
 .form-check .form-check-input { float: none; }
 .form-check .form-check-input:checked { background-color: #007aff; border-color: #007aff; }
@@ -183,5 +193,7 @@ footer > p { margin: 0; }
 
 .accordion .accordion-item .accordion-header .accordion-button { margin-bottom: 30px; border: 0; border-radius: 3px; font-size: 16px; font-weight: 500; color: white; background-color: #7a6fbe; }
 .accordion .accordion-item .accordion-header .accordion-button:after { color: white; }
+.accordion .accordion-item .accordion-header .accordion-button.mobile-style { outline: none; background-color: #409cff; border-color: #409cff; }
 .accordion .accordion-item .accordion-collapse { margin-top: -30px; margin-bottom: 30px; border: 0; background-color: whitesmoke; }
+.accordion .accordion-item .accordion-collapse.mobile-style { background-color: white; }
 .accordion .accordion-item .accordion-collapse .accordion-body { padding: 15px; }

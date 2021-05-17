@@ -35,6 +35,12 @@ body {
     }
 }
 
+.navbar-header {
+    @include range-width(0, 450px) {
+        padding: 0 12px;
+    }
+}
+
 .main-content {
     margin: 0 auto;
 
@@ -193,8 +199,20 @@ body {
                 padding: 24px 0;
                 background-color: rgb(42, 58, 75);
 
+                @include range-width(0, 450px) {
+                    padding: 0 24px;
+
+                    .container {
+                        justify-content: space-between;
+                    }
+                }
+
                 .page-title-box {
                     padding: 14px 0 29px 0;
+
+                    @include range-width(0, 450px) {
+                        padding: 14px ;
+                    }
 
                     > h4 {
                         margin: 0;
@@ -202,6 +220,11 @@ body {
                     }
 
                     .breadcrumb {
+
+                        @include range-width(0, 450px) {
+                            display: none;
+                        }
+
                         .breadcrumb-item {
                             &:before {
                                 color: rgba(255, 255, 255, 0.5);
@@ -246,6 +269,10 @@ body {
 
             #page-navbar {
                 // background-color: rgba(255, 255, 255, 1);
+
+                @include range-width(0 ,450px) {
+                    display: none;
+                }
 
                 #navbar-content {
                     position: relative;
@@ -651,7 +678,7 @@ body {
                         .tab-content {
 
                             .tab-pane {
-                                #datatable-buttons_wrapper {
+                                .dataTables_wrapper {
 
                                     .dataTables_scroll {
                                         .dataTables_scrollHead {
@@ -680,8 +707,9 @@ body {
                                         }
 
                                         .dataTables_scrollBody {
-                                            #datatable-buttons {
+                                            .datatable-buttons {
                                                 border-collapse: collapse !important;
+
                                                 tbody {
                                                     border-top: 1px solid rgb(233, 236, 239);
                                                     border-bottom: 1px solid rgb(233, 236, 239);
@@ -719,6 +747,10 @@ body {
 
                                                             &.orange {
                                                                 background-color: rgba(255, 134, 60, .3);
+                                                            }
+
+                                                            a {
+                                                                color: rgba(71, 80, 90, 1);
                                                             }
 
                                                             
@@ -1052,9 +1084,8 @@ footer {
     background-color: rgb(122, 111, 190);
     border-color: rgb(122, 111, 190);
 }
-
-.text-red {
-    color: rgb(236, 83, 108);
+.color-245 {
+    background-color: rgb(245, 245, 245);
 }
 
 .color-blue {
@@ -1080,6 +1111,10 @@ footer {
 
 .text-red {
     color: rgb(236, 83, 108) !important;
+}
+
+.text-red {
+    color: rgb(236, 83, 108);
 }
 
 .form-check {
@@ -1147,6 +1182,12 @@ footer {
                 &:after {
                     color: rgba(255, 255, 255, 1);
                 }
+
+                &.mobile-style {
+                    outline: none;
+                    background-color: rgb(64, 156, 255);
+                    border-color: rgb(64, 156, 255);
+                }
             }
         }
 
@@ -1157,6 +1198,9 @@ footer {
             border: 0;
             background-color: rgb(245, 245, 245);
 
+            &.mobile-style {
+                background-color: rgba(255, 255, 255, 1);
+            }
             .accordion-body {
                 padding: 15px;
             }
