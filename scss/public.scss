@@ -556,6 +556,15 @@ body {
                                             max-width: 161px;
                                         }
 
+                                            .buttons-colvis, .buttons-colvisRestore {
+                                                display: none;
+
+                                                &.show {
+                                                    display: inline-block;
+                                                }
+                                            }
+
+
                                         .dt-button-collection {
                                             .dropdown-menu {
                                                 .dropdown-item {

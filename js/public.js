@@ -10,14 +10,6 @@
 // (function ($) {
 $(document).ready(function(){
     function initSearchBar() {
-        // $('#search-title').on('click', function (event) {
-        //     event.preventDefault();
-        //     $(this).toggleClass('active');
-        //     $(this).find('i').toggleClass('down');
-        //     $(this).parent().find('#search-content').slideToggle();
-            
-        // });
-
         $('.title-style').on('click', function (event) {
             event.preventDefault();
             $(this).toggleClass('active');
@@ -77,16 +69,30 @@ $(document).ready(function(){
     }
 
     function initTabPillChange() {
-        $('a[data-bs-toggle="pill"]').on('shown.bs.tab', function (e) {
+        
+        $('.nav .nav-link').on('click', function(event) {
+            $('.buttons-colvisRestore').removeClass('show');
+            $('.buttons-colvis').removeClass('show');
+
+            let table = $(this).attr('data-table')
+
+            $('[aria-controls="' + table + '"]').addClass('show');
+        })
+
+        $('a[data-bs-toggle="pill"]').on('show.bs.tab', function (e) {
             
             if($(this).attr('id') === "pills-mission-atuo-tab") {
                 $('.card-button .buttons-delay').removeClass('d-none');
                 $('.card-button .buttons-add').removeClass('d-none');
+                $('.card-button .buttons-assign').addClass('d-none');
             } else {
                 $('.card-button .buttons-delay').addClass('d-none');
                 $('.card-button .buttons-add').addClass('d-none');
+                $('.card-button .buttons-assign').removeClass('d-none');
             }
-        })
+        });
+
+        $('#pills-all-tab').click();
     }
 
     function initTable() {
@@ -285,7 +291,6 @@ $(document).ready(function(){
 
     // 派工按鈕
     function initAssignSubmitBtn() {
-        
         $('.buttons-assign').on('click', function(event) {
             
             event.preventDefault();
