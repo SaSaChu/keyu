@@ -332,7 +332,7 @@
 						</div>
 					</div>
 					
-                    <div id="page-info" class="row align-items-center mb-5">
+                    <div id="page-info" class="row align-items-center mb-5 d-inline-block w-100">
                         
 						<div id="info-title" class="title-style container">
 							<div class="page-title-box d-flex justify-content-between align-items-center">
@@ -372,7 +372,7 @@
 													<div class="mb-3 text-start">
 														<label class="form-label text-start w-100">主要負責同仁</label>
 														<div class="col-md-12">
-                                                            <input class="form-control" type="text" value="台北區 - 王小明" readonly>
+                                                            <input class="form-control" type="text" value="所屬單位+員工編號+王小明" readonly>
                                                         </div>
 													</div>
 												</div>
@@ -511,7 +511,7 @@
 
 					</div>
 
-                    <div id="page-check" class="row align-items-center mb-5">
+                    <div id="page-check" class="row align-items-center mb-5 d-inline-block w-100">
                         
 						<div id="check-title" class="title-style container">
 							<div class="page-title-box d-flex justify-content-between align-items-center">
@@ -1034,7 +1034,7 @@
 						</div>
 					</div>
 
-                    <div id="page-mission" class="row align-items-center mb-5">
+                    <div id="page-mission" class="row align-items-center mb-5 d-inline-block w-100">
                         
 						<div id="mission-title" class="title-style container">
 							<div class="page-title-box d-flex justify-content-between align-items-center">
@@ -1047,9 +1047,6 @@
 							<div class="col-xl-12">
 								<div class="card">
 									<div class="card-body">
-
-										<!-- <h4 class="card-title">Colorpicker</h4> -->
-										<!-- <p class="card-title-desc">Fancy and customizable colorpicker plugin for Twitter Bootstrap.</p> -->
 
 										<form action="#">
                                             <div class="row">
@@ -1087,34 +1084,16 @@
                                             <div class="row">
                                                 <div class="col-md-4">
 													<div class="mb-3">
-														<label class="form-label w-100 text-start">登入日期</label>
-                                                        <input class="form-control" type="text" value="110年04月05日15:33" readonly>
+														<label class="form-label w-100 text-start">登入人員</label>
+                                                        <input class="form-control" type="text" value="所屬單位+員工編號+王小美" readonly>
 													</div>
 												</div> 
-                                                <div class="col-md-4">
+                                                <div class="col-md-8">
 													<div class="mb-3">
-														<label class="form-label w-100 text-start">指定日期</label>
-                                                        <input class="form-control" type="text" value="110年04月05日15:33" readonly>
+														<label class="form-label w-100 text-start">任務內容</label>
+                                                        <input class="form-control" type="text" value="列印出現黑線。" readonly>
 													</div>
 												</div> 
-                                                <div class="col-md-4">
-													<div class="mb-3">
-														<label class="form-label w-100 text-start">派工日期</label>
-                                                        <input class="form-control" type="text" value="110年04月05日17:55" readonly>
-													</div>
-												</div> 
-                                                <div class="col-md-4">
-													<div class="mb-3">
-														<label class="form-label w-100 text-start">任務類型</label>
-                                                        <input class="form-control" type="text" value="叫修" readonly>
-													</div>
-												</div>
-                                                <div class="col-md-4">
-													<div class="mb-3">
-														<label class="form-label w-100 text-start">任務細項</label>
-                                                        <input class="form-control" type="text" value="B-1黑色效果異常" readonly>
-													</div>
-												</div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -1125,19 +1104,21 @@
 												</div> 
                                                 <div class="col-md-4">
                                                     <label class="form-label w-100 text-start">任務狀態<span class="red">*</span></label>
-                                                    <select name="" id="" class="form-control" required>
-                                                        <option value="">請選擇</option>
-                                                        <option value="">請選擇</option>
-                                                        <option value="">請選擇</option>
-                                                        <option value="">請選擇</option>
+                                                    <select class="form-control select2" id="mission-status" required>
+                                                        <option>請選擇</option>
+                                                        <option value="finished">完成</option>
+                                                        <option value="CA">California</option>
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="CT">Connecticut</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-md-2 d-flex align-items-end">
+                                                <!-- <div class="col-md-2 d-flex align-items-end">
                                                     <div class="form-check form-switch d-flex align-items-center mb-2">
                                                         <input id="btn-dispatch" class="form-check-input me-3" type="checkbox" >
                                                         <label class="form-check-label" for="btn-dispatch">需重新派工</label>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div id="dispatch-box" class="col-md-12">
                                                     <div class="row">
                                                         <div class="col-md-3">
@@ -1275,13 +1256,12 @@
                     <div class="btn-action">
                         <div class="container p-0">
                             <div class="row d-flex justify-content-between">
-                                <div class="col-md-4 text-start">
+                                <div class="col-4 col-md-4 text-start">
                                     <button class="btn bg-secondary text-white btn-search"
                                         type="button">取消</button>
                                 </div>
-                                <div class="col-md-8 gap-2 d-md-flex justify-content-md-end">
-                                    <button class="btn btn-primary btn-reply color-blue" type="button">任務回報</button>
-                                    <button class="btn btn-primary btn-redispatch color-purple" type="button">重新派工</button>
+                                <div class="col-4 col-md-8 gap-2 d-flex justify-content-end">
+                                    <button class="btn btn-primary btn-reply color-blue" type="button">確定送出</button>
                                 </div>
                             </div>
                         </div>

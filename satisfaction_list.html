@@ -336,7 +336,7 @@
 					</div>
 
 					<!-- search bar -->
-					<div id="page-search" class="row align-items-center">
+					<div id="page-search" class="row align-items-center d-inline-block w-100 mb-3">
 						<div id="search-title" class="title-style container ">
 							<div class="page-title-box d-flex justify-content-between align-items-center">
 								<h4 class="text-white">篩選條件</h4>
@@ -532,12 +532,12 @@
 														<div class="d-flex">
 															<div class="col-md-5">
 																<input class="form-control" type="date"
-																	value="2011-08-19" id="">
+																	value="" placeholder="YYYY/MM/DD" id="">
 															</div>
 															<div class="col-md-1 d-flex justify-content-center align-items-center" >～</div>
 															<div class="col-md-5">
 																<input class="form-control" type="date"
-																	value="2011-08-19" id="">
+																	value="" placeholder="YYYY/MM/DD" id="">
 															</div>
 														</div>
 													</div>
@@ -558,12 +558,12 @@
 														<div class="d-flex">
 															<div class="col-md-5">
 																<input class="form-control" type="date"
-																	value="2011-08-19" id="">
+																	value="" placeholder="YYYY/MM/DD" id="">
 															</div>
 															<div class="col-md-1 d-flex justify-content-center align-items-center" >～</div>
 															<div class="col-md-5">
 																<input class="form-control" type="date"
-																	value="2011-08-19" id="">
+																	value="" placeholder="YYYY/MM/DD" id="">
 															</div>
 														</div>
 													</div>
@@ -748,8 +748,240 @@
 												<h4 class="card-title text-start">篩選結果</h4>
 											</div>
 											<div class="col-md-4 card-button text-end">
-												<button class="btn btn-secondary buttons-table buttons-excel" type="button"><span>匯出</span></button>
-												<button class="btn btn-secondary buttons-table buttons-assign" type="button"><span>派工</span></button>
+												<!-- 匯出 -->
+												<div class="btn-group">
+													<button class="btn btn-secondary buttons-table export-btn" type="button"><span>匯出</span></button>
+													<button class="btn btn-secondary buttons-table dropdown-toggle dropdown-toggle-split ps-1 pe-1 " type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														<i class="mdi mdi-chevron-down"></i>
+													</button>
+													<div class="buttons-table-menu dropdown-menu" style="margin: 0px;">
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">客戶基本資料</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label select-all">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="info">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="info">
+																<div class="form-check">
+																	<label class="form-check-label">客戶編號
+																		<input class="form-check-input export-columns" type="checkbox" value="1">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">客戶名稱
+																		<input class="form-check-input export-columns" type="checkbox" value="2">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">主要負責同仁
+																		<input class="form-check-input export-columns" type="checkbox" value="3">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">機號
+																		<input class="form-check-input export-columns" type="checkbox" value="4">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">廠牌
+																		<input class="form-check-input export-columns" type="checkbox" value="5">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">型號
+																		<input class="form-check-input export-columns" type="checkbox" value="6">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">縣市
+																		<input class="form-check-input export-columns" type="checkbox" value="7">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">地區
+																		<input class="form-check-input export-columns" type="checkbox" value="8">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">地址
+																		<input class="form-check-input export-columns" type="checkbox" value="9">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">主要聯絡人
+																		<input class="form-check-input export-columns" type="checkbox" value="10">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">連絡電話
+																		<input class="form-check-input export-columns" type="checkbox" value="11">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">手機
+																		<input class="form-check-input export-columns" type="checkbox" value="12">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">交易方式
+																		<input class="form-check-input export-columns" type="checkbox" value="13">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">合約起訖日
+																		<input class="form-check-input export-columns" type="checkbox" value="14">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">使用部門
+																		<input class="form-check-input export-columns" type="checkbox" value="15">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																
+															</div>
+														<div class="dropdown-divider"></div>
+														</div>
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">背景調查</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="check">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="check">
+																<div class="form-check">
+																	<label class="form-check-label">上次拜訪日期
+																		<input class="form-check-input export-columns" type="checkbox" value="16">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">黑白月均印量
+																		<input class="form-check-input export-columns" type="checkbox" value="17">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">彩色月均印量
+																		<input class="form-check-input export-columns" type="checkbox" value="18">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">使用人數
+																		<input class="form-check-input export-columns" type="checkbox" value="19">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">電腦台數
+																		<input class="form-check-input export-columns" type="checkbox" value="20">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">其他庫存
+																		<input class="form-check-input export-columns" type="checkbox" value="21">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+														</div>	
+														<div class="dropdown-item-group">
+															<div class="dropdown-item-title d-flex justify-content-between align-items-center">
+																<h4 class="col-md-8 font-size-14 fw-bolder">任務內容</h4>
+																<div class="form-check col-md-4">
+																	<label class="form-check-label">全選
+																		<input class="form-check-input select-all" type="checkbox" data-type="mission">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+															</div>
+															<div class="dropdown-divider"></div>
+															<div class="dropdown-items" data-type="mission">
+																<div class="form-check">
+																	<label class="form-check-label">登入日期
+																		<input class="form-check-input export-columns" type="checkbox" value="22">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">登入人員
+																		<input class="form-check-input export-columns" type="checkbox" value="23">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">指定日期
+																		<input class="form-check-input export-columns" type="checkbox" value="24">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">指定時段
+																		<input class="form-check-input export-columns" type="checkbox" value="25">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">派工日期
+																		<input class="form-check-input export-columns" type="checkbox" value="26">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">任務類型
+																		<input class="form-check-input export-columns" type="checkbox" value="27">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">任務細項
+																		<input class="form-check-input export-columns" type="checkbox" value="28">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																<div class="form-check">
+																	<label class="form-check-label">服務人員
+																		<input class="form-check-input export-columns" type="checkbox" value="29">
+																		<span class="checkmark"></span>
+																	</label>
+																</div>
+																
+															</div>
+															<div class="dropdown-divider"></div>
+														</div>	
+														<button class="btn btn-primary color-blue buttons-table-menu-btn">確定</button>
+														
+													</div>
+												</div>
+												<button class="btn btn-secondary buttons-table buttons-assign" type="button"><span>重新派工</span></button>
+												<button class="btn btn-secondary buttons-table buttons-assign" type="button"><span>安排調查人員</span></button>
 												<button class="btn btn-secondary buttons-table buttons-delete" type="button"><span>刪除</span></button>
 											</div>
 											<div class="col-md-2 card-button display-select"></div>
@@ -788,6 +1020,7 @@
 													<thead>
 														<tr>
 															<th class="select-all">全選</th>
+															<th>查看</th>	
 															<th>滿意度調查預計完成日</th>
 															<th>任務類型</th>
                                                             <th>任務細項</th>
@@ -807,6 +1040,7 @@
 													<tbody>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -823,6 +1057,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -839,6 +1074,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -855,6 +1091,7 @@
 														</tr>
                                                         <tr class="orange">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -871,6 +1108,7 @@
 														</tr>
                                                         <tr class="yellow">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -897,6 +1135,7 @@
 													<thead>
 														<tr>
 															<th class="select-all">全選</th>
+															<th>查看</th>	
 															<th>滿意度調查預計完成日</th>
 															<th>任務類型</th>
                                                             <th>任務細項</th>
@@ -916,6 +1155,7 @@
 													<tbody>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -932,6 +1172,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -948,6 +1189,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -964,6 +1206,7 @@
 														</tr>
                                                         <tr class="orange">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -980,6 +1223,7 @@
 														</tr>
                                                         <tr class="yellow">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1006,6 +1250,7 @@
 													<thead>
 														<tr>
 															<th class="select-all">全選</th>
+															<th>查看</th>	
 															<th>滿意度調查預計完成日</th>
 															<th>任務類型</th>
                                                             <th>任務細項</th>
@@ -1025,6 +1270,7 @@
 													<tbody>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1041,6 +1287,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1057,6 +1304,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1073,6 +1321,7 @@
 														</tr>
                                                         <tr class="orange">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1089,6 +1338,7 @@
 														</tr>
                                                         <tr class="yellow">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1115,6 +1365,7 @@
 													<thead>
 														<tr>
 															<th class="select-all">全選</th>
+															<th>查看</th>	
 															<th>滿意度調查預計完成日</th>
 															<th>任務類型</th>
                                                             <th>任務細項</th>
@@ -1134,6 +1385,7 @@
 													<tbody>
 														<tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1150,6 +1402,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1166,6 +1419,7 @@
 														</tr>
                                                         <tr>
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1182,6 +1436,7 @@
 														</tr>
                                                         <tr class="orange">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>
@@ -1198,6 +1453,24 @@
 														</tr>
                                                         <tr class="yellow">
 															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
+															<td>2021/3/19</td>
+															<td>叫修</td>
+															<td>B-1黑色效果異常</td>
+															<td>列印出現黑線</td>
+															<td>TP0832-01</td>
+															<td>林口長庚醫院-幹細胞 ...</td>
+															<td>KM</td>
+															<td>C364</td>
+															<td>A5C4444443</td>
+                                                            <td>王小明</td>
+                                                            <td>未調查</td>
+                                                            <td>5</td>
+                                                            <td>有</td>
+														</tr>
+														<tr>
+															<td></td>
+															<td class="text-center"><a href="satisfaction_content.html" class="mdi mdi-eye-circle text-gunmetal"></a></td>
 															<td>2021/3/19</td>
 															<td>叫修</td>
 															<td>B-1黑色效果異常</td>

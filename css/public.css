@@ -129,7 +129,7 @@ body::-webkit-scrollbar { display: none; }
 .main-content .page-content .container-fluid #page-check #check-content table tbody tr:nth-child(odd) { background-color: #f8f9fa; }
 .main-content .page-content .container-fluid #page-check #check-content table tbody tr td { font-size: 13px; }
 .main-content .page-content .container-fluid #page-check #check-content .accordion .accordion-item .accordion-header .accordion-button { margin-bottom: 30px; border: 0; border-radius: 3px; font-size: 16px; font-weight: 500; color: white; background-color: #7a6fbe; }
-.main-content .page-content .container-fluid #page-check #check-content .accordion .accordion-item .accordion-header .accordion-button:after { color: white; }
+.main-content .page-content .container-fluid #page-check #check-content .accordion .accordion-item .accordion-header .accordion-button:after { content: "\F0140"; font-family: 'Material Design Icons'; color: white; background-image: none; }
 .main-content .page-content .container-fluid #page-check #check-content .accordion .accordion-item .accordion-collapse { margin-top: -30px; margin-bottom: 30px; border: 0; background-color: whitesmoke; }
 .main-content .page-content .container-fluid #page-check #check-content .accordion .accordion-item .accordion-collapse .accordion-body { padding: 15px; }
 .main-content .page-content .container-fluid #page-mission #mission-content table thead th { font-size: 14px; }
@@ -194,8 +194,10 @@ footer > p { margin: 0; }
 #dispatch-box { display: none; }
 
 .accordion .accordion-item .accordion-header .accordion-button { margin-bottom: 30px; border: 0; border-radius: 3px; font-size: 16px; font-weight: 500; color: white; background-color: #7a6fbe; }
-.accordion .accordion-item .accordion-header .accordion-button:after { color: white; }
+.accordion .accordion-item .accordion-header .accordion-button:after { content: "\F0140"; font-family: 'Material Design Icons'; color: white; background-image: none; }
 .accordion .accordion-item .accordion-header .accordion-button.mobile-style { outline: none; background-color: #409cff; border-color: #409cff; }
 .accordion .accordion-item .accordion-collapse { margin-top: -30px; margin-bottom: 30px; border: 0; background-color: whitesmoke; }
 .accordion .accordion-item .accordion-collapse.mobile-style { background-color: white; }
 .accordion .accordion-item .accordion-collapse .accordion-body { padding: 15px; }
+
+@media screen and (max-width: 449px) and (min-width: 0) { .btn-action .row { padding: 0 12px; } }

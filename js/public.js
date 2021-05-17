@@ -255,11 +255,18 @@ $(document).ready(function(){
     }
 
     function initRedispatchBtn() {
-        $('#btn-dispatch').on('click', function(event) {
-            // event.preventDefault();
+        $('#mission-status').on('change', function(event) {
+            let value = $(this).val();
 
-            $('#dispatch-box').toggle();
+            if(value !== 'finished') {
+                $('#dispatch-box').show();
+            } else {
+                $('#dispatch-box').hide(); 
+            }
         })
+        // $('#btn-dispatch').on('click', function(event) {
+            // $('#dispatch-box').toggle(); 
+        // })
         
     }
 

@@ -852,7 +852,10 @@ body {
                                     background-color: rgb(122, 111, 190);
 
                                     &:after {
+                                        content: "\F0140";
+                                        font-family: 'Material Design Icons';
                                         color: rgba(255, 255, 255, 1);
+                                        background-image: none;
                                     }
                                 }
                             }
@@ -1189,7 +1192,12 @@ footer {
                 background-color: rgb(122, 111, 190);
 
                 &:after {
+                    
+                    content: "\F0140";
+                    font-family: 'Material Design Icons';
                     color: rgba(255, 255, 255, 1);
+                    background-image: none;
+                    
                 }
 
                 &.mobile-style {
@@ -1213,6 +1221,14 @@ footer {
             .accordion-body {
                 padding: 15px;
             }
+        }
+    }
+}
+
+.btn-action {
+    @include range-width(0, 450px) {
+        .row {
+            padding: 0 12px;
         }
     }
 }
