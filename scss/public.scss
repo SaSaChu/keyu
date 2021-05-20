@@ -56,6 +56,11 @@ body {
                     height: 80px;
                     border-radius: 3px;
                     background-color: rgba(42, 58, 75, .75);
+
+                    @include range-width(0, 450px) {
+                        padding: calc((50px - 45px) / 2) 12px;
+                        height: 50px; 
+                    }
     
                     &.active {
                         background-color: rgba(0, 122, 255, 0.75);
@@ -68,6 +73,10 @@ body {
                         > h4 {
                             font-size: 20px;
                             font-weight: 600;
+
+                            @include range-width(0, 450px) {
+                                margin: 0;
+                            } 
                         }
     
                         > i {
@@ -87,10 +96,19 @@ body {
                         .card-body {
                             padding: 12px;
                             margin: 0 30px;
+
+                            @include range-width(0, 450px) {
+                                margin: 0;
+                                padding: 0 12px;
+                            }
     
                             .row {
                                 position: relative;
                                 padding: 30px 0;
+
+                                @include range-width(0, 450px) {
+                                    padding: 20px 0;
+                                }
     
                                 &:after {
                                     content: "";

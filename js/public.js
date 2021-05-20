@@ -111,7 +111,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">廠牌</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入">
                         </div>
                     </div>
@@ -121,7 +121,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">型號</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入" >
                         </div>
                     </div>
@@ -131,7 +131,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">尺寸</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入" >
                         </div>
                     </div>
@@ -141,7 +141,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">色彩</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入" >
                         </div>
                     </div>
@@ -151,7 +151,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">類型</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入" >
                         </div>
                     </div>
@@ -161,7 +161,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">租賃/購買</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入" >
                         </div>
                     </div>
@@ -171,7 +171,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">使用年限</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入">
                         </div>
                     </div>
@@ -181,7 +181,7 @@ $(document).ready(function(){
                 <div class="mb-3">
                     <label class="form-label w-100 text-start">服務廠商</label>
                     <div class="d-flex">
-                        <div class="col-md-12">
+                        <div class="col-12">
                             <input class="form-control" type="text" value="請輸入">
                         </div>
                     </div>
