@@ -335,9 +335,10 @@ body {
 
 						.dropdown-menu {
 							position: absolute;
-							top: calc(100% + 2px);
+							top: calc(100%);
 							border-radius: 3px;
                             width: 100%;
+                            border-top: 2px solid rgb(122, 111, 190);
 
 							.dropdown-item {
 								font-size: 16px;
