@@ -281,7 +281,9 @@ $(document).ready(function(){
 
         $('input.select-all').on('click', function(event){
             let type = $(this).attr('data-type');
-            $('.dropdown-items[data-type='+type+']').find('input').click();
+            
+            // $('.dropdown-items[data-type='+type+']').find('input:checkbox:not(:checked)').click();
+            $('.dropdown-items[data-type='+type+']').find('input:checkbox').not(this).prop('checked', this.checked);;
         })
     }
 
