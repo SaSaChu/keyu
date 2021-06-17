@@ -336,10 +336,12 @@ body {
 						.dropdown-menu {
 							position: absolute;
 							top: calc(100%);
-							border-radius: 3px;
+							// border-radius: 3px;
+                            border-radius: 0 0 .25rem .25rem;
                             width: 100%;
-                            border-top: 2px solid rgb(122, 111, 190);
-
+                            // border-top: 2px solid rgb(122, 111, 190);
+                            animation-duration: .1s;
+                            
 							.dropdown-item {
 								font-size: 16px;
 								font-weight: 500;
@@ -1080,6 +1082,10 @@ footer {
 			height: 35px;
 		}
 	}
+
+    .select2-dropdown {
+        z-index: 0;
+    }
 
 	
 	

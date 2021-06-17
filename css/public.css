@@ -58,7 +58,7 @@ body::-webkit-scrollbar { display: none; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item:hover > h4 > a, .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item.active > h4 > a { color: #7a6fbe; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item > i { font-size: 20px; color: #2a3a4b; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item > h4 > a { font-size: 16px; font-weight: 500; color: #2a3a4b; }
-.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item .dropdown-menu { position: absolute; top: calc(100%); border-radius: 3px; width: 100%; border-top: 2px solid #7a6fbe; }
+.main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item .dropdown-menu { position: absolute; top: calc(100%); border-radius: 0 0 .25rem .25rem; width: 100%; animation-duration: .1s; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .navbar-item .dropdown-menu .dropdown-item { font-size: 16px; font-weight: 500; color: #47505a; }
 .main-content .page-content .container-fluid #page-search #search-title { padding: calc((80px - 45px) / 2) 12px; border-radius: 3px; background-color: rgba(42, 58, 75, 0.75); }
 .main-content .page-content .container-fluid #page-search #search-title.active { background-color: rgba(0, 122, 255, 0.75); }
@@ -161,6 +161,7 @@ footer > p { margin: 0; }
 .select2-container .select2-selection--single { padding: 2px 0; height: 35px; border: 1px solid #ced4da; }
 .select2-container .select2-selection--single .select2-selection__rendered { font-size: 14px; font-weight: 500; color: rgba(71, 80, 90, 0.5); }
 .select2-container .select2-selection--single .select2-selection__arrow { height: 35px; }
+.select2-container .select2-dropdown { z-index: 0; }
 
 .select2-container--default .select2-results__option[aria-selected="true"] { background-color: transparent; }
 .select2-container--default .select2-results__option[aria-selected="true"]:before { background-color: #007aff; }
