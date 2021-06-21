@@ -34,12 +34,15 @@ body {
         display: none;
     }
 }
-
-.navbar-header {
-    @include range-width(0, 450px) {
-        padding: 0 12px;
+#page-topbar {
+    z-index: 1052;
+    .navbar-header {
+        @include range-width(0, 450px) {
+            padding: 0 12px;
+        }
     }
 }
+
 
 .main-content {
     margin: 0 auto;
@@ -1081,14 +1084,7 @@ footer {
 		.select2-selection__arrow {
 			height: 35px;
 		}
-	}
-
-    .select2-dropdown {
-        z-index: 0;
-    }
-
-	
-	
+	}	
 }
 
 .select2-container--default {

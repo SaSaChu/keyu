@@ -6,7 +6,8 @@ body::-moz-selection { color: white; background-color: #78baff; }
 body::selection { color: white; background-color: #78baff; }
 body::-webkit-scrollbar { display: none; }
 
-@media screen and (max-width: 449px) and (min-width: 0) { .navbar-header { padding: 0 12px; } }
+#page-topbar { z-index: 1052; }
+@media screen and (max-width: 449px) and (min-width: 0) { #page-topbar .navbar-header { padding: 0 12px; } }
 
 .main-content { margin: 0 auto; }
 .main-content .page-content { padding: 70px 0 60px 0; }
@@ -161,7 +162,6 @@ footer > p { margin: 0; }
 .select2-container .select2-selection--single { padding: 2px 0; height: 35px; border: 1px solid #ced4da; }
 .select2-container .select2-selection--single .select2-selection__rendered { font-size: 14px; font-weight: 500; color: rgba(71, 80, 90, 0.5); }
 .select2-container .select2-selection--single .select2-selection__arrow { height: 35px; }
-.select2-container .select2-dropdown { z-index: 0; }
 
 .select2-container--default .select2-results__option[aria-selected="true"] { background-color: transparent; }
 .select2-container--default .select2-results__option[aria-selected="true"]:before { background-color: #007aff; }
