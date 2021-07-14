@@ -292,68 +292,116 @@ body {
                 // background-color: rgba(255, 255, 255, 1);
 
                 @include range-width(0 ,450px) {
-                    display: none;
+                    // display: none;
                 }
 
                 #navbar-content {
                     position: relative;
                     bottom: 40px;
-
                     border-radius: 3px;
 
-                    .navbar-item {
-						position: relative;
-                        padding: 12px 12px 9px 12px;
-                        border-bottom: 2px solid transparent;
-                        cursor: pointer;
+                    .topnav {
+                        @include range-width(0, 450px) {
+                            background-color: rgba(111, 111, 111, .8);
+                            max-height: unset;
+                        }
+                        .navbar {
+                            .navbar-collapse {
 
-                        &:hover,
-                        &.active {
-                            border-bottom-color: rgb(122, 111, 190);
-
-                            > i {
-                                color: rgb(122, 111, 190);
-                            }
-
-                            > h4 {
-                                > a {
-                                    color: rgb(122, 111, 190);
+                                @include range-width(0, 450px) {
+                                    &.show {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                    }
                                 }
-                                
+
+                                .navbar-nav {
+
+                                    @include range-width(0, 450px) {
+                                        
+                                        width: 50% !important;
+                                        height: 100vh;
+                                        background-color: rgba(255, 255, 255, 1.0);
+
+                                        text-align: left;
+                                    }
+
+                                    .nav-item {
+                                        position: relative;
+                                        padding: 12px 12px 9px 12px;
+                                        border-bottom: 2px solid transparent;
+                                        cursor: pointer;
+                
+                                        &:hover,
+                                        &.active {
+                                            border-bottom-color: rgb(122, 111, 190);
+                                            
+                                            @include range-width(0, 450px) {
+                                                border-bottom-color: transparent;
+                                            }
+
+                                            a.nav-link {
+                                                color: rgb(122, 111, 190);
+            
+                                                i {
+                                                    color: rgb(122, 111, 190);
+                                                }
+                                            }
+                                        }
+            
+                                        &:nth-child(3):hover {
+                                            border-bottom-color: transparent;
+                                        }
+            
+                                        a.nav-link {
+                                            padding: 0;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            color: rgb(42, 58, 75);
+
+                                            @include range-width(0, 450px) {
+                                                display: flex;
+                                                align-items: center;
+                                            }
+            
+                                            > i {
+                                                margin-bottom: 0;
+                                                font-size: 20px;
+                                                color: rgb(42, 58, 75);
+                                            }
+                                        }      
+                                        
+                                        .dropdown-menu {                                
+                                            left: -9px;
+                                            border-top: 2px solid rgb(122, 111, 190);
+                                            @include range-width(0, 450px) {
+                                                border-top-color: transparent;
+                                            }
+                                            .dropdown-item {
+                                                font-size: 16px;
+                                                font-weight: 500;
+                                                @include range-width(0, 450px) {
+                                                    padding-left: 15px;
+                                                }
+
+                                                &:hover {
+                                                    color: #2c3034;
+                                                    background-color: #f8f9fa;
+
+                                                    @include range-width(0, 450px) {
+                                                        background-color: transparent;
+                                                    } 
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
-
-                        > i {
-                            font-size: 20px;
-                            color: rgb(42, 58, 75);
-                        }
-                        > h4 {
-                            > a {
-                                font-size: 16px;
-                            font-weight: 500;
-                            color: rgb(42, 58, 75);
-                            }
-                            
-                        }
-
-						.dropdown-menu {
-							position: absolute;
-							top: calc(100%);
-							// border-radius: 3px;
-                            border-radius: 0 0 .25rem .25rem;
-                            width: 100%;
-                            // border-top: 2px solid rgb(122, 111, 190);
-                            animation-duration: .1s;
-                            
-							.dropdown-item {
-								font-size: 16px;
-								font-weight: 500;
-								color:rgb(71, 80, 90);
-							}
-						}
                     }
                 }
             }
+
 
             #page-search {
                 #search-title {
@@ -578,23 +626,27 @@ body {
 
                                     .btn-group {
                                         position: unset;
+
                                         .dt-button-collection {
-                                            left: 10px !important;
+                                            // left: 10px !important;
                                             width: 100%;
                                             max-width: 161px;
                                         }
 
-                                            .buttons-colvis, .buttons-colvisRestore {
-                                                display: none;
+                                        .buttons-colvis, .buttons-colvisRestore {
+                                            display: none;
 
-                                                &.show {
-                                                    display: inline-block;
-                                                }
+                                            &.show {
+                                                display: inline-block;
                                             }
+                                        }
 
 
                                         .dt-button-collection {
                                             .dropdown-menu {
+                                                max-height: 200px;
+                                                overflow-y: scroll;
+
                                                 .dropdown-item {
                                                     font-size: 13px;
 
@@ -734,13 +786,24 @@ body {
 
                                                                 &.select-all {
                                                                     cursor: pointer;
+                                                                    position: relative;
+
+                                                                    
+                                                                    > span {
+                                                                        display: inline-block;
+                                                                        width: 15px;
+                                                                        height: 15px;
+                                                                        vertical-align: middle;
+                                                                        border: solid 1px rgb(206, 212, 217);
+                                                                        border-radius: 3px;
+                                                                    }
+                                                                    
                                                                 }
                                                             }
                                                         }
                                                     }
                                                 }
                                             }
-                                            
                                         }
 
                                         .dataTables_scrollBody {
@@ -813,7 +876,9 @@ body {
                                                             color: rgb(42, 58, 75);
                                                             text-align: left;
 
-                                                           
+                                                            &.dataTables_empty {
+                                                                text-align: center;
+                                                            }
     
                                                             &.select-checkbox {
                                                                 position: relative;
@@ -1028,14 +1093,14 @@ footer {
         .select2-results__options {
 
 			.select2-results__option {
-				margin-left: 10px;
+				// margin: 0 10px;
 				font-size: 14px;
 				font-weight: 500;
 				color: rgba(71, 80, 90, 1);
 				text-align: left;
 
                 &:hover {
-                    background-color: transparent;
+                    background-color: rgba(239, 239, 239, 0.5);
                 }
 	
 			} 
@@ -1096,7 +1161,7 @@ footer {
     }
 
     .select2-results__option--highlighted[aria-selected] {
-        background-color: transparent;
+        background-color: rgba(239, 239, 239, 0.5);
     }
     
 }
