@@ -48,8 +48,15 @@ $(document).ready(function(){
     }
 
     function initContentStyle() {
+        
         $('.content-style').toggle();
-        $('.title-style').eq(0).click();
+        console.log($('#page-mission').attr('data-page'))
+        if($('#page-mission').attr('data-page') === 'detail') {
+            $('.title-style').eq(2).click();
+        } else {
+            $('.title-style').eq(0).click();
+        }
+        
     }
 
     function initGetFileName() {
