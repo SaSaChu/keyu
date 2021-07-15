@@ -53,7 +53,9 @@ $(document).ready(function() {
         rows.remove().draw();
     });
 
-    $(document).on("click", "#datatable-buttons th.select-checkbox", function() {
+    $(document).on("click", ".datatable-buttons1 th.select-checkbox:eq(0)", function() {
+            
+            $(this).find('span').toggleClass('active');
         if ($("#datatable-buttons th.select-checkbox").hasClass("selected")) {
             table.rows().deselect();
             $("#datatable-buttons th.select-checkbox").removeClass("selected");
@@ -117,6 +119,7 @@ $(document).ready(function() {
     });
 
     $(document).on("click", "#datatable-buttons2 th.select-checkbox", function() {
+        $()
         if ($("#datatable-buttons2 th.select-checkbox").hasClass("selected")) {
             table2.rows().deselect();
             $("#datatable-buttons2 th.select-checkbox").removeClass("selected");

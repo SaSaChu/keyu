@@ -302,28 +302,22 @@ body {
 
                     .topnav {
                         @include range-width(0, 450px) {
-                            background-color: rgba(111, 111, 111, .8);
-                            max-height: unset;
+                            // background-color: rgba(111, 111, 111, .8);
+                            // max-height: unset;
+                            box-shadow: 5px 2px 5px black;
+                            border-radius: 0 0 3px 3px;
                         }
                         .navbar {
                             .navbar-collapse {
 
                                 @include range-width(0, 450px) {
                                     &.show {
-                                        display: flex;
-                                        justify-content: flex-end;
                                     }
                                 }
 
                                 .navbar-nav {
 
                                     @include range-width(0, 450px) {
-                                        
-                                        width: 50% !important;
-                                        height: 100vh;
-                                        background-color: rgba(255, 255, 255, 1.0);
-
-                                        text-align: left;
                                     }
 
                                     .nav-item {
@@ -348,6 +342,21 @@ body {
                                                 }
                                             }
                                         }
+
+                                        &.readonly {
+                                            &:hover,
+                                            &.active {
+
+                                                a.nav-link {
+                                                    color: rgba(193, 197, 201, 1.00);
+
+                                                    i {
+                                                        color: rgba(193, 197, 201, 1.00);
+                                                    }
+                                                }
+                                                
+                                            }
+                                        }
             
                                         &:nth-child(3):hover {
                                             border-bottom-color: transparent;
@@ -362,12 +371,18 @@ body {
                                             @include range-width(0, 450px) {
                                                 display: flex;
                                                 align-items: center;
+                                                color: rgba(193, 197, 201, 1.00);
+
                                             }
             
                                             > i {
                                                 margin-bottom: 0;
                                                 font-size: 20px;
                                                 color: rgb(42, 58, 75);
+
+                                                @include range-width(0, 450px) {
+                                                    color: rgba(193, 197, 201, 1.00);
+                                                }
                                             }
                                         }      
                                         
@@ -787,6 +802,7 @@ body {
                                                                 &.select-all {
                                                                     cursor: pointer;
                                                                     position: relative;
+                                                                    padding-left: 10px;
 
                                                                     
                                                                     > span {
@@ -796,6 +812,22 @@ body {
                                                                         vertical-align: middle;
                                                                         border: solid 1px rgb(206, 212, 217);
                                                                         border-radius: 3px;
+
+                                                                        &.active {
+                                                                            position: relative;
+
+                                                                            &:after {
+                                                                                content: '';
+                                                                                position: absolute;
+                                                                                top: 1.5px;
+                                                                                left: 1.5px;
+                                                                                padding: 2.5px;
+                                                                                width: 10px;
+                                                                                height: 10px;
+                                                                                border-radius: 3px;
+                                                                                background-color: #007aff;
+                                                                            }
+                                                                        }
                                                                     }
                                                                     
                                                                 }
