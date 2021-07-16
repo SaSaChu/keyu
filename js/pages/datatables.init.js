@@ -55,7 +55,7 @@ $(document).ready(function() {
 
     $(document).on("click", ".datatable-buttons1 th.select-checkbox:eq(0)", function() {
             
-            $(this).find('span').toggleClass('active');
+        $(this).find('span').toggleClass('active'); 
         if ($("#datatable-buttons th.select-checkbox").hasClass("selected")) {
             table.rows().deselect();
             $("#datatable-buttons th.select-checkbox").removeClass("selected");
