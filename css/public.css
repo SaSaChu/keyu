@@ -6,6 +6,8 @@ body::-moz-selection { color: white; background-color: #78baff; }
 body::selection { color: white; background-color: #78baff; }
 body::-webkit-scrollbar { display: none; }
 
+h4 { margin-bottom: 0 !important; }
+
 #page-topbar { z-index: 1052; }
 @media screen and (max-width: 449px) and (min-width: 0) { #page-topbar .navbar-header { padding: 0 12px; } }
 
@@ -48,7 +50,7 @@ body::-webkit-scrollbar { display: none; }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-breadcrumb .page-title-box .breadcrumb { display: none; } }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box .breadcrumb .breadcrumb-item:before { color: rgba(255, 255, 255, 0.5); }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn:nth-child(2) { margin: 0 20px; }
-.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a { padding: 5px 10px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 15px; }
+.main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a { padding: 5px 10px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 40px; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i { position: relative; display: inline-block; margin-right: 5px; width: 20px; height: 20px; background-color: white; border-radius: 50%; vertical-align: middle; }
 .main-content .page-content .container-fluid #page-breadcrumb .page-action-box .action-btn > a > i:before { position: absolute; top: -2px; left: 2px; color: #007aff; font-size: 16px; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content { position: relative; bottom: 40px; border-radius: 3px; }
