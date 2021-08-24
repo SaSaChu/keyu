@@ -32,6 +32,22 @@ h4 {
     margin-bottom: 0 !important;
 }
 
+
+
+.mdi{
+    &.accUse {
+        &:before {
+            line-height: normal;
+        }
+    }
+}
+
+.dataTables_paginate {
+    padding-top: 20px;
+}
+
+
+
 #page-topbar {
     z-index: 1052;
     .navbar-header {
@@ -259,7 +275,7 @@ h4 {
                         }
                         > a {
                             // display: inline-block;
-                            padding: 5px 10px;
+                            padding: 5px 10px 7px 10px;
                             border: 1px solid rgba(255, 255, 255, 0.5);
                             border-radius: 40px;
 
