@@ -50,7 +50,7 @@ $(document).ready(function(){
     function initContentStyle() {
         
         $('.content-style').toggle();
-        console.log($('#page-mission').attr('data-page'))
+        
         if($('#page-mission').attr('data-page') === 'detail') {
             $('.title-style').eq(2).click();
         } else {

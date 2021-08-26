@@ -110,6 +110,7 @@ h4 {
     
                     .card {
                         width: 100%;
+                        
                         .card-body {
                             padding: 12px;
                             margin: 0 30px;
@@ -439,6 +440,10 @@ h4 {
                     border-radius: 3px;
                     background-color: rgba(42, 58, 75, .75);
 
+                    @include range-width(0, 450px) {
+                        padding: 0;
+                    }
+
                     &.active {
                         background-color: rgba(0, 122, 255, 0.75);
                     }
@@ -446,6 +451,10 @@ h4 {
                     .page-title-box {
                         margin: 0 30px;
                         padding: 0;
+
+                        @include range-width(0, 450px) {
+                            padding: 2.5px 0;
+                        }
 
                         > h4 {
                             font-size: 20px;
@@ -468,9 +477,41 @@ h4 {
                             padding: 12px;
                             margin: 0 30px;
 
+                            form {
+                                @include range-width(0, 450px) {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+
                             .row {
                                 position: relative;
                                 padding: 30px 0;
+
+                                @include range-width(0, 450px) {
+                                    padding: 0;
+
+                                    &:nth-of-type(1) {
+                                        order: 3;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        order: 1;
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        order: 2;
+                                    }
+                                    
+                                    &:nth-of-type(4) {
+                                        order: 4;
+                                    }
+
+                                    &:nth-of-type(6) {
+                                        order: 5;
+                                    }
+                                }
+
                                 &:after {
                                     content: "";
                                     position: absolute;
@@ -479,6 +520,10 @@ h4 {
                                     width: calc(100% - 20px);
                                     max-width: 1140px;
                                     border-bottom: 2px dashed rgb(181, 187, 193);
+
+                                    @include range-width(0, 450px) {
+                                        content: unset;
+                                    }
                                 }
 
                                 &:nth-last-child(2) {
@@ -515,6 +560,9 @@ h4 {
 
                                 .space {
                                     margin: 15px 0;
+                                    @include range-width(0, 450px) {
+                                        margin: 0;
+                                    }
                                 }
 
                                 .btn-search {
@@ -539,6 +587,11 @@ h4 {
             #page-results {
 
                 #results-content {
+                    &.container {
+                        @include range-width(1200px, 0) {
+                            max-width: calc(100% - 100px);
+                        }
+                    }
                     .card-body {
                         padding: 25px 40px;
 
@@ -667,6 +720,12 @@ h4 {
 
                                             &.show {
                                                 display: inline-block;
+                                            }
+
+                                            &.buttons-colvisRestore {
+                                                @include range-width(0, 450px) {
+                                                    display: none;
+                                                }
                                             }
                                         }
 
@@ -922,6 +981,20 @@ h4 {
                                                             color: rgb(42, 58, 75);
                                                             text-align: left;
 
+                                                            > p {
+                                                                display: -webkit-box;
+                                                                -webkit-line-clamp: 2;
+                                                                -webkit-box-orient: vertical;  
+                                                                overflow: hidden;
+                                                                white-space: normal;
+                                                                margin: 0;
+                                                            }
+                                                            
+                                                            &.ellipse{
+                                                                display: block;
+                                                                max-width:200px !important;
+                                                            }
+
                                                             &.dataTables_empty {
                                                                 // text-align: center;
                                                             }
@@ -937,7 +1010,6 @@ h4 {
                                                                     left: 23%;
                                                                     border: solid 1px rgb(206, 212, 217);
                                                                     border-radius: 3px;
-      
                                                                 }
                                                             }
                                                         }
@@ -1225,6 +1297,12 @@ footer {
     border: solid 1px rgba(206, 212, 217, 0.5);
     background-color: rgb(255, 255, 255);
     z-index: 1;
+
+    @include range-width(0, 450px) {
+        top: 30px;
+        left: 0;
+
+    }
 }
 
 .color-purple {
@@ -1243,6 +1321,16 @@ footer {
 
 .color-gunmetal {
     color: rgba(71, 80, 90, .5);
+}
+
+.color-gunmetal2 {
+    background-color: rgb(81, 87, 96);
+    border-color: rgb(81, 87, 96);
+}
+
+.color-pale-grey {
+    background-color: rgb(247, 248, 249);
+    border-color: rgb(247, 248, 249); 
 }
 
 .text-blue {
@@ -1264,6 +1352,7 @@ footer {
 .text-red {
     color: rgb(236, 83, 108);
 }
+
 
 .form-check {
     // float: none;
@@ -1341,6 +1430,12 @@ footer {
                     background-color: rgb(64, 156, 255);
                     border-color: rgb(64, 156, 255);
                 }
+
+                &.mobile-style-reported {
+                    outline: none;
+                    background-color: rgb(71, 80, 90);
+                    border-color: rgb(71, 80, 90);
+                }
             }
         }
 
@@ -1356,6 +1451,23 @@ footer {
             }
             .accordion-body {
                 padding: 15px;
+
+                .accordion-box {
+                    hr {
+                        height: 0;
+                        margin: 1rem 0;
+                        border: none;
+                        border-bottom: solid 1px #000000;
+                    }
+
+                    .dashed {
+                        border-bottom: dashed 1px #000000;
+                    }
+
+                    .ps-85 {
+                        padding-left: 85px;
+                    }
+                }                
             }
         }
     }
