@@ -238,7 +238,7 @@ footer > p { margin: 0; }
 
 #dispatch-box { display: none; }
 
-.accordion .accordion-item .accordion-header .accordion-button { margin-bottom: 30px; border: 0; border-radius: 3px; font-size: 16px; font-weight: 500; color: white; background-color: #7a6fbe; }
+.accordion .accordion-item .accordion-header .accordion-button { margin-bottom: 20px; border: 0; border-radius: 3px; font-size: 16px; font-weight: 500; color: white; background-color: #7a6fbe; }
 .accordion .accordion-item .accordion-header .accordion-button:after { content: "\F0140"; font-family: 'Material Design Icons'; color: white; background-image: none; }
 .accordion .accordion-item .accordion-header .accordion-button.mobile-style { outline: none; background-color: #409cff; border-color: #409cff; }
 .accordion .accordion-item .accordion-header .accordion-button.mobile-style-reported { outline: none; background-color: #47505a; border-color: #47505a; }
