@@ -116,6 +116,11 @@ h4 {
     
                     .card {
                         width: 100%;
+
+                        @include range-width(0, 450px) {
+                            width: calc(100% - 30px);
+                            margin: 0 15px 0 15px;
+                        }
                         
                         .card-body {
                             padding: 12px;

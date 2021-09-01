@@ -28,6 +28,7 @@ h4 { margin-bottom: 0 !important; }
 .main-content .page-content .container-fluid .row > .title-style .page-title-box > i { font-size: 30px; transition: all 0.5s; }
 .main-content .page-content .container-fluid .row > .title-style .page-title-box > i.down { transform: rotate(180deg); }
 .main-content .page-content .container-fluid .row > .content-style .card { width: 100%; }
+@media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid .row > .content-style .card { width: calc(100% - 30px); margin: 0 15px 0 15px; } }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body { padding: 12px; margin: 0 30px; }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid .row > .content-style .card .card-body { margin: 0; padding: 0 12px; } }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row { position: relative; padding: 30px 0; }
