@@ -1265,9 +1265,11 @@ footer {
     }
 
     .select2-selection--single {
+        position: relative;
 		padding: 2px 0;
 		height: 35px;
 		border: 1px solid #ced4da;
+
 
 		.select2-selection__rendered {
 			font-size: 14px;
