@@ -708,6 +708,66 @@ h4 {
                                 }
                             }
 
+                            .buttons-mobile-menu {
+
+                                .mobile-button-background {
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    display: none;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 999;
+                                    
+                                    &.show {
+                                        display: block;
+                                    }
+                                }
+                                .mobile-button-collection {
+                                    .dropdown-menu {
+                                        max-height: 200px;
+                                        overflow-y: scroll;
+                                        &.show {
+                                            right: 0;
+                                        }
+                                        .dropdown-item {
+                                            font-size: 13px;
+
+                                            &:first-child {
+                                                // display: none;
+                                            }
+
+                                            &.active {
+                                                > span {
+                                                    &:after {
+                                                        content: '';
+                                                        position: absolute;
+                                                        top: 2px;
+                                                        left: 4px;
+                                                        width: 12px;
+                                                        height: 12px;
+                                                        background-color: #007aff;
+                                                        border-radius: 3px;
+                                                    }
+                                                }
+                                            }
+                                            > span {
+                                                position: relative;
+
+                                                &:before {
+                                                    content: '';
+                                                    display: inline-block;
+                                                    margin-right: 10px;
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    border: 1px solid rgb(206, 212, 217);
+                                                    border-radius: 3px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                } 
+                            }
                             .card-button {
 
                                 &.display-select {
@@ -1461,6 +1521,32 @@ footer {
 
             &.mobile-style {
                 background-color: rgba(255, 255, 255, 1);
+
+                .accordion-body {
+                    .accordion-box {
+                        .accordion-text {
+                            display: none;
+
+                            &.show {
+                                display: block;
+                                
+                                // 超過顯示 ...
+                                // display: -webkit-box;
+                                // -webkit-line-clamp: 2;
+                                // -webkit-box-orient: vertical;  
+                                // overflow: hidden;
+                                // white-space: normal;
+                                // margin: 0;
+                                
+                                // span.ellipse{
+                                //     display: block;
+                                //     max-width:200px !important;
+                                // }
+                            }
+                        }
+                    }
+                }
+
             }
             .accordion-body {
                 padding: 15px;

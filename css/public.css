@@ -120,6 +120,14 @@ h4 { margin-bottom: 0 !important; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-table-menu > .dropdown-item-group .form-check > .form-check-label > .checkmark { position: absolute; top: 0; left: 0; height: 20px; width: 20px; border-radius: 3px; border: solid 1px #ced4d9; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-table-menu > .dropdown-item-group .form-check > .form-check-label > .checkmark:after { content: ""; position: absolute; left: 1px; top: 1px; width: 16px; height: 16px; border: 1px solid transparent; border-radius: 3px; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-table-menu > .dropdown-item-group > .dropdown-items { display: flex; flex-wrap: wrap; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-background { position: fixed; top: 0; left: 0; display: none; width: 100%; height: 100%; z-index: 999; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-background.show { display: block; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu { max-height: 200px; overflow-y: scroll; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu.show { right: 0; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu .dropdown-item { font-size: 13px; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu .dropdown-item.active > span:after { content: ''; position: absolute; top: 2px; left: 4px; width: 12px; height: 12px; background-color: #007aff; border-radius: 3px; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu .dropdown-item > span { position: relative; }
+.main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .buttons-mobile-menu .mobile-button-collection .dropdown-menu .dropdown-item > span:before { content: ''; display: inline-block; margin-right: 10px; width: 20px; height: 20px; border: 1px solid #ced4d9; border-radius: 3px; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .card-button.display-select { position: relative; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .card-button.display-select .buttons-table { margin-left: 5px; }
 .main-content .page-content .container-fluid #page-results #results-content .card-body .card-box .card-button.display-select .btn-group { position: unset; }
@@ -246,6 +254,8 @@ footer > p { margin: 0; }
 .accordion .accordion-item .accordion-header .accordion-button.mobile-style-reported { outline: none; background-color: #47505a; border-color: #47505a; }
 .accordion .accordion-item .accordion-collapse { margin-top: -30px; margin-bottom: 30px; border: 0; background-color: whitesmoke; }
 .accordion .accordion-item .accordion-collapse.mobile-style { background-color: white; }
+.accordion .accordion-item .accordion-collapse.mobile-style .accordion-body .accordion-box .accordion-text { display: none; }
+.accordion .accordion-item .accordion-collapse.mobile-style .accordion-body .accordion-box .accordion-text.show { display: block; }
 .accordion .accordion-item .accordion-collapse .accordion-body { padding: 15px; }
 .accordion .accordion-item .accordion-collapse .accordion-body .accordion-box hr { height: 0; margin: 1rem 0; border: none; border-bottom: solid 1px #000000; }
 .accordion .accordion-item .accordion-collapse .accordion-body .accordion-box .dashed { border-bottom: dashed 1px #000000; }

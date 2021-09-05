@@ -435,7 +435,7 @@
 											</div>
 
 											<div class="row">
-												<div class="col-md-4">
+												<div class="d-none d-md-block col-md-4">
 													<div class="mb-3 text-start">
 														<label class="form-label text-start w-100">客戶編號</label>
 														<select class="form-control select2">
@@ -448,9 +448,36 @@
 														</select>
 													</div>
 												</div>
-												<div class="col-md-4">
+												<div class="d-none d-md-block col-md-4">
 													<div class="mb-3 text-start">
 														<label class="form-label text-start w-100">客戶名稱</label>
+														<select class="form-control select2">
+															<option>請選擇</option>
+															<option value="AK">Alaska</option>
+															<option value="CA">California</option>
+															<option value="AZ">Arizona</option>
+															<option value="AL">Alabama</option>
+															<option value="CT">Connecticut</option>
+														</select>
+													</div>
+												</div>
+
+												<div class="d-block d-md-none col-md-4">
+													<div class="mb-3 text-start">
+														<label class="form-label text-start w-100">客編及簡稱</label>
+														<select class="form-control select2">
+															<option>請選擇</option>
+															<option value="AK">Alaska</option>
+															<option value="CA">California</option>
+															<option value="AZ">Arizona</option>
+															<option value="AL">Alabama</option>
+															<option value="CT">Connecticut</option>
+														</select>
+													</div>
+												</div>
+												<div class="d-block d-md-none col-md-4">
+													<div class="mb-3 text-start">
+														<label class="form-label text-start w-100">客戶全名</label>
 														<select class="form-control select2">
 															<option>請選擇</option>
 															<option value="AK">Alaska</option>
@@ -1086,8 +1113,29 @@
 												<!-- 延期 -->
 												<button class="btn btn-secondary buttons-table buttons-delay d-none" type="button"><span>延期</span></button>
 											</div>
-											<!-- 選取顯示，手機版暫時隱藏 -->
+											<!-- Web 選取顯示，-->
 											<div class="d-none d-md-block col-6 col-md-2 card-button display-select"></div>
+											<!-- mobile 選取顯示 -->
+											<div class="buttons-mobile-menu d-block d-md-none col-6 text-end">
+												<div class="btn-group dropright mobile-button-collection">
+													<button type="button" class="buttons-mobile-menu btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													  選取顯示
+													</button>
+													<div class="mobile-button-background"></div>
+													<div class="dropdown-menu" role="menu">
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="6"><span>到期日</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="7"><span>指定日期時段</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="8"><span>任務類型</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="9"><span>任務細項</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="10"><span>任務內容</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="11"><span>客戶編號</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="12"><span>客戶名稱</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="13"><span>廠牌</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="14"><span>機型</span></a> 
+														<a class="dropdown-item mobile-buttons-columnVisibility" href="javascript:void(0)" data-idx="15"><span>機號</span></a> 
+													</div>
+												</div>
+											</div>
 										</div>
 
 										<div class="card-nav d-none d-md-flex align-items-center">
@@ -1830,12 +1878,21 @@
 														<div class="accordion-box">
 															<div class="row">
 																<div class="col-12 text-start">
-																	<p><span class="fw-bold">登錄日期：</span>2021/07/20</p>
-																	<p><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
-																	<p><span class="fw-bold">任務內容：</span>測試指派任務功能</p>
-																	<p><span class="fw-bold">任務狀態：</span>完成</p>
-																	<p><span class="fw-bold">服務人員：</span>林小樓</p>	
-																	<p><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text show"><span class="fw-bold">登錄日期：</span>2021/07/20</p>
+																	<p class="accordion-text show"><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
+																	<p class="accordion-text show"><span class="fw-bold ellipse">任務內容：</span>測試指派任務測試指派任務測試指派任務測試指派任務測試指派任務</p>
+																	<p class="accordion-text show"><span class="fw-bold">任務狀態：</span>完成</p>
+																	<p class="accordion-text show"><span class="fw-bold">服務人員：</span>林小樓</p>	
+																	<p class="accordion-text show"><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text "><span class="fw-bold">到期日：</span>2021/3/21</p>
+																	<p class="accordion-text "><span class="fw-bold">指定日期時段：</span>2021/3/21 9:00-12:00</p>
+																	<p class="accordion-text "><span class="fw-bold">任務類型：</span>叫修</p>
+																	<p class="accordion-text "><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶編號：</span>TP0832-01</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶名稱：</span>林口長庚醫院-幹細胞</p>
+																	<p class="accordion-text "><span class="fw-bold">廠牌：</span>KM</p>
+																	<p class="accordion-text "><span class="fw-bold">機型：</span>C364</p>
+																	<p class="accordion-text "><span class="fw-bold">機號：</span>A5C4444443</p>
 																</div>
 															</div>
 
@@ -1863,12 +1920,21 @@
 														<div class="accordion-box">
 															<div class="row">
 																<div class="col-12 text-start">
-																	<p><span class="fw-bold">登錄日期：</span>2021/07/20</p>
-																	<p><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
-																	<p><span class="fw-bold">任務內容：</span>測試指派任務功能</p>
-																	<p><span class="fw-bold">任務狀態：</span>完成</p>
-																	<p><span class="fw-bold">服務人員：</span>林小樓</p>	
-																	<p><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text show"><span class="fw-bold">登錄日期：</span>2021/07/20</p>
+																	<p class="accordion-text show"><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
+																	<p class="accordion-text show"><span class="fw-bold ellipse">任務內容：</span>測試指派任務測試指派任務測試指派任務測試指派任務測試指派任務</p>
+																	<p class="accordion-text show"><span class="fw-bold">任務狀態：</span>完成</p>
+																	<p class="accordion-text show"><span class="fw-bold">服務人員：</span>林小樓</p>	
+																	<p class="accordion-text show"><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text "><span class="fw-bold">到期日：</span>2021/3/21</p>
+																	<p class="accordion-text "><span class="fw-bold">指定日期時段：</span>2021/3/21 9:00-12:00</p>
+																	<p class="accordion-text "><span class="fw-bold">任務類型：</span>叫修</p>
+																	<p class="accordion-text "><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶編號：</span>TP0832-01</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶名稱：</span>林口長庚醫院-幹細胞</p>
+																	<p class="accordion-text "><span class="fw-bold">廠牌：</span>KM</p>
+																	<p class="accordion-text "><span class="fw-bold">機型：</span>C364</p>
+																	<p class="accordion-text "><span class="fw-bold">機號：</span>A5C4444443</p>
 																</div>
 															</div>
 
@@ -1896,12 +1962,21 @@
 														<div class="accordion-box">
 															<div class="row">
 																<div class="col-12 text-start">
-																	<p><span class="fw-bold">登錄日期：</span>2021/07/20</p>
-																	<p><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
-																	<p><span class="fw-bold">任務內容：</span>測試指派任務功能</p>
-																	<p><span class="fw-bold">任務狀態：</span>完成</p>
-																	<p><span class="fw-bold">服務人員：</span>林小樓</p>	
-																	<p><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text show"><span class="fw-bold">登錄日期：</span>2021/07/20</p>
+																	<p class="accordion-text show"><span class="fw-bold">客編及簡稱：</span>真有錢有限公司</p>
+																	<p class="accordion-text show"><span class="fw-bold ellipse">任務內容：</span>測試指派任務測試指派任務測試指派任務測試指派任務測試指派任務</p>
+																	<p class="accordion-text show"><span class="fw-bold">任務狀態：</span>完成</p>
+																	<p class="accordion-text show"><span class="fw-bold">服務人員：</span>林小樓</p>	
+																	<p class="accordion-text show"><span class="fw-bold">地址：</span>新北市板橋區建國街22號1樓</p>
+																	<p class="accordion-text "><span class="fw-bold">到期日：</span>2021/3/21</p>
+																	<p class="accordion-text "><span class="fw-bold">指定日期時段：</span>2021/3/21 9:00-12:00</p>
+																	<p class="accordion-text "><span class="fw-bold">任務類型：</span>叫修</p>
+																	<p class="accordion-text "><span class="fw-bold">任務細項：</span>B-1黑色效果異常</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶編號：</span>TP0832-01</p>
+																	<p class="accordion-text "><span class="fw-bold">客戶名稱：</span>林口長庚醫院-幹細胞</p>
+																	<p class="accordion-text "><span class="fw-bold">廠牌：</span>KM</p>
+																	<p class="accordion-text "><span class="fw-bold">機型：</span>C364</p>
+																	<p class="accordion-text "><span class="fw-bold">機號：</span>A5C4444443</p>
 																</div>
 															</div>
 
