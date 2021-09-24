@@ -455,13 +455,13 @@
 											<!-- 已回報 -->
 											<div class="accordion-item">
 												<h2 class="accordion-header" id="headingTwo">
-													<button class="accordion-button mobile-style-reported" type="button"
+													<button class="accordion-button mobile-style-reported collapsed" type="button"
 														data-bs-toggle="collapse" data-bs-target="#collapseTwo"
 														aria-expanded="true" aria-controls="collapseOne">
 														任務二
 													</button>
 												</h2>
-												<div id="collapseTwo" class="mobile-style accordion-collapse collapse show"
+												<div id="collapseTwo" class="mobile-style accordion-collapse collapse"
 													aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 													<div class="accordion-body">
 														<div class="accordion-box">
@@ -501,13 +501,13 @@
 											</div>
 											<div class="accordion-item">
 												<h2 class="accordion-header" id="headingThree">
-													<button class="accordion-button mobile-style" type="button"
+													<button class="accordion-button mobile-style collapsed" type="button"
 														data-bs-toggle="collapse" data-bs-target="#collapseThree"
 														aria-expanded="true" aria-controls="collapseOne">
 														任務三
 													</button>
 												</h2>
-												<div id="collapseThree" class="mobile-style accordion-collapse collapse show"
+												<div id="collapseThree" class="mobile-style accordion-collapse collapse"
 													aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 													<div class="accordion-body">
 														<div class="accordion-box">
@@ -615,9 +615,11 @@
 		<script>
 			$(document).ready(function() {
 				$('.all-open').on('click', function() {
+					$('#accordionExample').find('.accordion-button').removeClass('collapsed');
 					$('#accordionExample').find('.accordion-collapse').addClass('show');
 				})
 				$('.all-close').on('click', function() {
+					$('#accordionExample').find('.accordion-button').addClass('collapsed');
 					$('#accordionExample').find('.accordion-collapse').removeClass('show');
 				})
 			});
