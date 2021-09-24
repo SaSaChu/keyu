@@ -387,7 +387,21 @@
 												</div>
 											</div>
 										</div>
-										
+										<div class="row mb-3">
+											<div class="col-4">
+												<!-- <button type="button" class="btn btn-primary btn-sm">Small button</button> -->
+											</div>
+											<div class="col-8">
+												<div class="row">
+													<div class="col">
+														<button type="button" class="btn btn-primary btn-sm all-open">全部展開</button>
+													</div>
+													<div class="col">
+														<button type="button" class="btn btn-primary btn-sm all-close">全部收合</button>
+													</div>
+												</div>	
+											</div>
+										</div>	
 										<div class="accordion" id="accordionExample">
 											<div class="accordion-item">
 												<h2 class="accordion-header" id="headingOne">
@@ -447,7 +461,7 @@
 														任務二
 													</button>
 												</h2>
-												<div id="collapseTwo" class="mobile-style accordion-collapse collapse"
+												<div id="collapseTwo" class="mobile-style accordion-collapse collapse show"
 													aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
 													<div class="accordion-body">
 														<div class="accordion-box">
@@ -493,7 +507,7 @@
 														任務三
 													</button>
 												</h2>
-												<div id="collapseThree" class="mobile-style accordion-collapse collapse"
+												<div id="collapseThree" class="mobile-style accordion-collapse collapse show"
 													aria-labelledby="headingThree" data-bs-parent="#accordionExample">
 													<div class="accordion-body">
 														<div class="accordion-box">
@@ -556,6 +570,7 @@
 		</div>
 
 		<!-- js -->
+		
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="libs/metismenu/metisMenu.min.js"></script>
@@ -596,6 +611,18 @@
 		<!-- App js -->
 		<script src="js/app.js"></script>
 		<script language="javascript" type="text/javascript" src="js/public.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$('.all-open').on('click', function() {
+					$('#accordionExample').find('.accordion-collapse').addClass('show');
+				})
+				$('.all-close').on('click', function() {
+					$('#accordionExample').find('.accordion-collapse').removeClass('show');
+				})
+			});
+		</script>
+		
 </body>
 
 </html>
