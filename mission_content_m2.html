@@ -387,21 +387,14 @@
 												</div>
 											</div>
 										</div>
+										<!-- 210924 新增手機版 全部展開、收合按鈕 -->
 										<div class="row mb-3">
-											<div class="col-4">
-												<!-- <button type="button" class="btn btn-primary btn-sm">Small button</button> -->
-											</div>
-											<div class="col-8">
-												<div class="row">
-													<div class="col">
-														<button type="button" class="btn btn-primary btn-sm all-open">全部展開</button>
-													</div>
-													<div class="col">
-														<button type="button" class="btn btn-primary btn-sm all-close">全部收合</button>
-													</div>
-												</div>	
+											<div class="col-12 text-start">
+												<button type="button" class="btn btn-primary all-open">全部展開</button>
+												<button type="button" class="btn btn-primary all-close">全部收合</button>
 											</div>
 										</div>	
+										<!-- End -->
 										<div class="accordion" id="accordionExample">
 											<div class="accordion-item">
 												<h2 class="accordion-header" id="headingOne">
@@ -612,6 +605,8 @@
 		<script src="js/app.js"></script>
 		<script language="javascript" type="text/javascript" src="js/public.js"></script>
 
+		<!-- 210924 新增手機版 全部展開、收合按鈕 -->
+		<!-- 目前需求是只有這頁會需要到 全部展開、收合按鈕 所以直接 Js 寫在頁面上-->
 		<script>
 			$(document).ready(function() {
 				$('.all-open').on('click', function() {
@@ -624,6 +619,7 @@
 				})
 			});
 		</script>
+		<!-- End -->
 		
 </body>
 
