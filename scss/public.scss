@@ -243,7 +243,7 @@ h4 {
 
             #page-breadcrumb {
                 // margin: 0 calc(120px - 24px);
-                padding: 24px 0;
+                padding: 24px;
                 background-color: rgb(42, 58, 75);
 
                 @include range-width(0, 450px) {
@@ -415,6 +415,10 @@ h4 {
                                         .dropdown-menu {                                
                                             left: -9px;
                                             border-top: 2px solid rgb(122, 111, 190);
+
+                                            @include range-width(451px, 992px){
+                                                text-align: center;
+                                            }
                                             @include range-width(0, 450px) {
                                                 border-top-color: transparent;
                                             }

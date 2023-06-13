@@ -47,7 +47,7 @@ h4 { margin-bottom: 0 !important; }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row .space { margin: 15px 0; }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row .btn-search { padding-left: 0; padding-right: 0; width: 100px; height: 40px; font-size: 16px; background-color: #007aff; }
 .main-content .page-content .container-fluid .row > .content-style .card .card-body .row .btn-search:before { margin-right: 10px; }
-.main-content .page-content .container-fluid #page-breadcrumb { padding: 24px 0; background-color: #2a3a4b; }
+.main-content .page-content .container-fluid #page-breadcrumb { padding: 24px; background-color: #2a3a4b; }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-breadcrumb { padding: 0 24px; }
   .main-content .page-content .container-fluid #page-breadcrumb .container { justify-content: space-between; } }
 .main-content .page-content .container-fluid #page-breadcrumb .page-title-box { padding: 14px 0 29px 0; }
@@ -74,6 +74,7 @@ h4 { margin-bottom: 0 !important; }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item a.nav-link > i { margin-bottom: 0; font-size: 20px; color: #2a3a4b; }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item a.nav-link > i { color: #c1c5c9; } }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu { left: -9px; border-top: 2px solid #7a6fbe; }
+@media screen and (max-width: 991px) and (min-width: 451px) { .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu { text-align: center; } }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu { border-top-color: transparent; } }
 .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item { font-size: 16px; font-weight: 500; }
 @media screen and (max-width: 449px) and (min-width: 0) { .main-content .page-content .container-fluid #page-navbar #navbar-content .topnav .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item { padding-left: 15px; } }
